@@ -1,18 +1,5 @@
 #!/usr/bin/env bash
 
-# Poetry bug
-poetry() {
-    if [[ $@ == "shell" ]]; then
-        if ([[ -f "$(poetry env info -p)/bin/activate" ]] && [[ -z "${VIRTUAL_ENV:-}" ]]); then
-            command source $(poetry env info -p)/bin/activate
-        else
-            command poetry "$@"
-        fi
-    else
-        command poetry "$@"
-    fi
-}
-
 # Alias
 alias cat=bat
 alias l=exa
