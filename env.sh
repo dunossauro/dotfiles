@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 
-cp .bashr* ~/
+cp bash/.bashr* ~/
 cp -r terminator/ ~/.config/
+cp -r .emacs.d ~/
