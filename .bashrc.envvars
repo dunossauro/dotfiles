@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+export BASH_IT="/home/dunossauro/.bash_it"
+export BASH_IT_THEME='bobby-python'
+export THEME_SHOW_PYTHON=true
+source "$BASH_IT"/bash_it.sh
