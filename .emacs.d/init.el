@@ -227,13 +227,27 @@
         flycheck-indication-mode 'left-fringe
         flycheck-standard-error-navigation t
         flycheck-deferred-syntax-check nil)
-  :config
-  ;; before install flake8 (pip install flake8)
-  (setq flycheck-python-flake8-executable "~/.local/bin/flake8")
-  ;; before install pylint (pip install pylint)
-  ;; after install, create config file (pylint --generate-rcfile > ~/.pylintrc)
-  (setq flycheck-python-pylint-executable "~/.local/bin/pylint")
-)
+   :config
+   ;; before install flake8 (pip install flake8)
+   (setq flycheck-python-flake8-executable "~/.local/bin/flake8")
+   ;; before install pylint (pip install pylint)
+   ;; after install, create config file (pylint --generate-rcfile > ~/.pylintrc)
+   (setq flycheck-python-pylint-executable "~/.local/bin/pylint")
+   )
+
+(require 'lsp-diagnostics)
+(lsp-diagnostics-flycheck-enable)
+
+;; Spell
+(setq
+  ispell-program-name
+  "/usr/bin/hunspell")
+(require 'flyspell)
+(add-hook 'text-mode-hook 'flyspell-mode)
+(eval-after-load "flyspell"
+  '(progn
+     (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
+     (define-key flyspell-mouse-map [mouse-3] #'undefined)))
 
 (use-package flycheck-inline
   :ensure t)
@@ -358,3 +372,6 @@
 (require 'term)
 (define-key term-mode-map (kbd "C-c") 'term-kill-subjob)
 (define-key term-mode-map (kbd "C-d") 'kill-process)
+
+(add-hook 'python-mode-hook
+     '(lambda () (define-key python-mode-map (kbd "C-c C-v") 'duplicate-line)))
