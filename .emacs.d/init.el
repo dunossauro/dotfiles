@@ -235,9 +235,6 @@
    (setq flycheck-python-pylint-executable "~/.local/bin/pylint")
    )
 
-(require 'lsp-diagnostics)
-(lsp-diagnostics-flycheck-enable)
-
 ;; Spell
 (setq
   ispell-program-name
@@ -279,7 +276,9 @@
   :after lsp-mode
   :config
   (setq lsp-ui-doc-mode 1))
-  
+
+(require 'lsp-diagnostics)
+(lsp-diagnostics-flycheck-enable)  
 
 ;; --------- My Functions
 (defun select-line ()
