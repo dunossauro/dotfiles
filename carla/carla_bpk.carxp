@@ -1,0 +1,1726 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<!DOCTYPE CARLA-PROJECT>
+<CARLA-PROJECT VERSION='2.5'>
+ <EngineSettings>
+  <ForceStereo>false</ForceStereo>
+  <PreferPluginBridges>false</PreferPluginBridges>
+  <PreferUiBridges>true</PreferUiBridges>
+  <UIsAlwaysOnTop>false</UIsAlwaysOnTop>
+  <MaxParameters>200</MaxParameters>
+  <UIBridgesTimeout>4000</UIBridgesTimeout>
+ </EngineSettings>
+
+ <Transport>
+  <BeatsPerMinute>120</BeatsPerMinute>
+ </Transport>
+
+ <!-- Audio Gain (Mono) -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Audio Gain (Mono)</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/audiogain</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>N</ControlChannel>
+   <Options>0x4</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>19</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>4</MappedMaximum>
+    <MidiCC>19</MidiCC>
+    <Value>1.38582682609558</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_blue</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaColor</Key>
+    <Value>170;170;255</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42 Instrument Tuner -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>x42 Instrument Tuner</Name>
+   <URI>http://gareus.org/oss/lv2/tuna#one</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Tuning A440</Name>
+    <Symbol>tuning</Symbol>
+    <Value>440</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_blue</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaColor</Key>
+    <Value>255;85;255</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Channel Filter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>MIDI CH 1 - Synth</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/midichanfilter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>N</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>1</Name>
+    <Symbol>_1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>2</Name>
+    <Symbol>_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>3</Name>
+    <Symbol>_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>4</Name>
+    <Symbol>_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>5</Name>
+    <Symbol>_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>6</Name>
+    <Symbol>_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>7</Name>
+    <Symbol>_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>8</Name>
+    <Symbol>_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>9</Name>
+    <Symbol>_9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>10</Name>
+    <Symbol>_10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>11</Name>
+    <Symbol>_11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>12</Name>
+    <Symbol>_12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>13</Name>
+    <Symbol>_13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>14</Name>
+    <Symbol>_14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>15</Name>
+    <Symbol>_15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>16</Name>
+    <Symbol>_16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_blue</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Channel Filter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>MIDI CH3 - chords</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/midichanfilter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>N</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>1</Name>
+    <Symbol>_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>2</Name>
+    <Symbol>_2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>3</Name>
+    <Symbol>_3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>4</Name>
+    <Symbol>_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>5</Name>
+    <Symbol>_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>6</Name>
+    <Symbol>_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>7</Name>
+    <Symbol>_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>8</Name>
+    <Symbol>_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>9</Name>
+    <Symbol>_9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>10</Name>
+    <Symbol>_10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>11</Name>
+    <Symbol>_11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>12</Name>
+    <Symbol>_12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>13</Name>
+    <Symbol>_13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>14</Name>
+    <Symbol>_14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>15</Name>
+    <Symbol>_15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>16</Name>
+    <Symbol>_16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Chord -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>MIDI Chord</Name>
+   <URI>http://gareus.org/oss/lv2/midifilter#midichord</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Scale</Name>
+    <Symbol>scale</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Hold Chord</Name>
+    <Symbol>hold</Symbol>
+    <Value>11</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>prime</Name>
+    <Symbol>c1</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>2nd</Name>
+    <Symbol>c2</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>3rd</Name>
+    <Symbol>c3</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>4th</Name>
+    <Symbol>c4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>5th</Name>
+    <Symbol>c5</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>6th</Name>
+    <Symbol>c6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>7th</Name>
+    <Symbol>c7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>octave</Name>
+    <Symbol>c8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>9th</Name>
+    <Symbol>c9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>11th</Name>
+    <Symbol>c11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>13th</Name>
+    <Symbol>c13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>bass</Name>
+    <Symbol>_8</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Fluidsynth -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Fluidsynth</Name>
+   <URI>http://calf.sourceforge.net/plugins/Fluidsynth</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Volume</Name>
+    <Symbol>master</Symbol>
+    <MidiChannel>1</MidiChannel>
+    <MappedControlIndex>18</MappedControlIndex>
+    <MappedMinimum>0</MappedMinimum>
+    <MappedMaximum>1</MappedMaximum>
+    <MidiCC>18</MidiCC>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Interpolation</Name>
+    <Symbol>interpolation</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Reverb</Name>
+    <Symbol>reverb</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Chorus</Name>
+    <Symbol>chorus</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:soundfont</Key>
+    <Value>/home/dunossauro/documents/fluid/FluidR3 GM.sf2</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set2</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set3</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set4</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set5</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set6</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set7</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set8</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set9</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set10</Key>
+    <Value>16384</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set11</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set12</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set13</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set14</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set15</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>urn:calf:preset_key_set16</Key>
+    <Value>0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- MIDI Channel Filter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>MIDI CH 2 - autontune</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/midichanfilter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>N</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>1</Name>
+    <Symbol>_1</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>2</Name>
+    <Symbol>_2</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>3</Name>
+    <Symbol>_3</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>4</Name>
+    <Symbol>_4</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>5</Name>
+    <Symbol>_5</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>6</Name>
+    <Symbol>_6</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>7</Name>
+    <Symbol>_7</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>8</Name>
+    <Symbol>_8</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>9</Name>
+    <Symbol>_9</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>10</Name>
+    <Symbol>_10</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>11</Name>
+    <Symbol>_11</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>12</Name>
+    <Symbol>_12</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>13</Name>
+    <Symbol>_13</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>14</Name>
+    <Symbol>_14</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>15</Name>
+    <Symbol>_15</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>16</Name>
+    <Symbol>_16</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_black</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaColor</Key>
+    <Value>85;255;0</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Deesser -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Deesser</Name>
+   <URI>http://calf.sourceforge.net/plugins/Deesser</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.00156459002755582</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>3</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Laxity</Name>
+    <Symbol>laxity</Symbol>
+    <Value>15</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Makeup</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Split</Name>
+    <Symbol>f1_freq</Symbol>
+    <Value>18000</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Peak</Name>
+    <Symbol>f2_freq</Symbol>
+    <Value>4500</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Gain</Name>
+    <Symbol>f1_level</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Level</Name>
+    <Symbol>f2_level</Symbol>
+    <Value>16</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>Peak Q</Name>
+    <Symbol>f2_q</Symbol>
+    <Value>7.31139087677002</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>S/C-Listen</Name>
+    <Symbol>sc_listen</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- RNNoise suppression for voice -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>RNNoise suppression for voice</Name>
+   <URI>https://github.com/werman/noise-suppression-for-voice</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x1</Options>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://lv2plug.in/ns/ext/atom#String</Type>
+    <Key>https://github.com/werman/noise-suppression-for-voice:StateString</Key>
+    <Value>
+218.VMjLgDM....O+fWarAhckI2bo8la8HRLt.iHfTlai8FYo41Y8HRUTYTK3HxO9.BOR4jSuk1bk4COPEjTA0DHoQVOhXWXj80YxE1Xk8EbkIWZuQlHfXWXrUWY8HxMw3BLh7hO7.UPRETSfjFY8HhcgQ1WxUFcx8VXiQWZ1U1WmIWXiU1WvUlbo8FYh.hcgwVck0iHv3BLh7hO7.UPRETSfjFY8HhcgQ1WzglbkMGZuwFYh.hcgwVck0iHv3hL0jSN4jSN4.CM1LiL0XCNh7hO77hTN4zaoMWY9..
+    </Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Gate -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Gate</Name>
+   <URI>http://calf.sourceforge.net/plugins/Gate</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Max Gain Reduction</Name>
+    <Symbol>range</Symbol>
+    <Value>1.58490001922473e-05</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Threshold</Name>
+    <Symbol>threshold</Symbol>
+    <Value>0.00138106860686094</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Ratio</Name>
+    <Symbol>ratio</Symbol>
+    <Value>20</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>Attack</Name>
+    <Symbol>attack</Symbol>
+    <Value>0.00999999977648258</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>249.999984741211</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Makeup Gain</Name>
+    <Symbol>makeup</Symbol>
+    <Value>1.580082654953</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Knee</Name>
+    <Symbol>knee</Symbol>
+    <Value>1.28342592716217</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Detection</Name>
+    <Symbol>detection</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>Stereo Link</Name>
+    <Symbol>stereo_link</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_black</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Audio Gain (Stereo) -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Audio Gain (Stereo)</Name>
+   <URI>http://kxstudio.sf.net/carla/plugins/audiogain_s</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x4</Options>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Gain</Name>
+    <Symbol>gain</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Apply Left</Name>
+    <Symbol>apply_left</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Apply Right</Name>
+    <Symbol>apply_right</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>false</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_black</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- Calf Limiter -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>Calf Limiter</Name>
+   <URI>http://calf.sourceforge.net/plugins/Limiter</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Bypass</Name>
+    <Symbol>bypass</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Input Gain</Name>
+    <Symbol>level_in</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Output Gain</Name>
+    <Symbol>level_out</Symbol>
+    <Value>0.344840258359909</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>Limit</Name>
+    <Symbol>limit</Symbol>
+    <Value>0.175312414765358</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>Lookahead</Name>
+    <Symbol>attack</Symbol>
+    <Value>5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>Release</Name>
+    <Symbol>release</Symbol>
+    <Value>50</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>ASC</Name>
+    <Symbol>asc</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>ASC Level</Name>
+    <Symbol>asc_coeff</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>Oversampling</Name>
+    <Symbol>oversampling</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>Auto-level</Name>
+    <Symbol>auto_level</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_black</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-Autotune -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>autotune L</Name>
+   <URI>http://gareus.org/oss/lv2/fat1</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Tuning</Name>
+    <Symbol>tuning</Symbol>
+    <Value>440</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Bias</Name>
+    <Symbol>bias</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Correction</Name>
+    <Symbol>corr</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Offset</Name>
+    <Symbol>offset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Pitch Bend Range</Name>
+    <Symbol>bendrange</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Fast Correction</Name>
+    <Symbol>fastmode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>C</Name>
+    <Symbol>m00</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>C#</Name>
+    <Symbol>m01</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>D</Name>
+    <Symbol>m02</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>D#</Name>
+    <Symbol>m03</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>E</Name>
+    <Symbol>m04</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>F</Name>
+    <Symbol>m05</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>F#</Name>
+    <Symbol>m06</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>G</Name>
+    <Symbol>m07</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>G#</Name>
+    <Symbol>m08</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>A</Name>
+    <Symbol>m09</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>A#</Name>
+    <Symbol>m10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>B</Name>
+    <Symbol>m11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaColor</Key>
+    <Value>85;255;0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_black</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <!-- x42-Autotune -->
+ <Plugin>
+  <Info>
+   <Type>LV2</Type>
+   <Name>autotune R</Name>
+   <URI>http://gareus.org/oss/lv2/fat1</URI>
+  </Info>
+
+  <Data>
+   <Active>Yes</Active>
+   <DryWet>0</DryWet>
+   <ControlChannel>1</ControlChannel>
+   <Options>0x3f1</Options>
+
+   <Parameter>
+    <Index>0</Index>
+    <Name>Mode</Name>
+    <Symbol>mode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>1</Index>
+    <Name>Filter Channel</Name>
+    <Symbol>channelf</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>2</Index>
+    <Name>Tuning</Name>
+    <Symbol>tuning</Symbol>
+    <Value>440</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>3</Index>
+    <Name>Bias</Name>
+    <Symbol>bias</Symbol>
+    <Value>0.5</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>4</Index>
+    <Name>Filter</Name>
+    <Symbol>filter</Symbol>
+    <Value>0.100000001490116</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>5</Index>
+    <Name>Correction</Name>
+    <Symbol>corr</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>6</Index>
+    <Name>Offset</Name>
+    <Symbol>offset</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>7</Index>
+    <Name>Pitch Bend Range</Name>
+    <Symbol>bendrange</Symbol>
+    <Value>2</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>8</Index>
+    <Name>Fast Correction</Name>
+    <Symbol>fastmode</Symbol>
+    <Value>0</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>9</Index>
+    <Name>C</Name>
+    <Symbol>m00</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>10</Index>
+    <Name>C#</Name>
+    <Symbol>m01</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>11</Index>
+    <Name>D</Name>
+    <Symbol>m02</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>12</Index>
+    <Name>D#</Name>
+    <Symbol>m03</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>13</Index>
+    <Name>E</Name>
+    <Symbol>m04</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>14</Index>
+    <Name>F</Name>
+    <Symbol>m05</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>15</Index>
+    <Name>F#</Name>
+    <Symbol>m06</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>16</Index>
+    <Name>G</Name>
+    <Symbol>m07</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>17</Index>
+    <Name>G#</Name>
+    <Symbol>m08</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>18</Index>
+    <Name>A</Name>
+    <Symbol>m09</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>19</Index>
+    <Name>A#</Name>
+    <Symbol>m10</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <Parameter>
+    <Index>20</Index>
+    <Name>B</Name>
+    <Symbol>m11</Symbol>
+    <Value>1</Value>
+   </Parameter>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkinIsCompacted</Key>
+    <Value>true</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaColor</Key>
+    <Value>85;255;0</Value>
+   </CustomData>
+
+   <CustomData>
+    <Type>http://kxstudio.sf.net/ns/carla/property</Type>
+    <Key>CarlaSkin</Key>
+    <Value>calf_black</Value>
+   </CustomData>
+  </Data>
+ </Plugin>
+
+ <ExternalPatchbay>
+  <Connection>
+   <Source>SSL 2+ Estéreo digital (IEC958):capture_FL</Source>
+   <Target>Carla:Audio Gain (Mono):Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>SSL 2+ Estéreo digital (IEC958):capture_FR</Source>
+   <Target>Carla:Calf Deesser:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>SSL 2+ Estéreo digital (IEC958):capture_FR</Source>
+   <Target>Carla:Calf Deesser:In R</Target>
+  </Connection>
+  <Connection>
+   <Source>SSL 2+ Estéreo digital (IEC958):capture_FR</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_SL</Target>
+  </Connection>
+  <Connection>
+   <Source>SSL 2+ Estéreo digital (IEC958):capture_FR</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_SR</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Audio Gain (Mono):Audio Output 1</Source>
+   <Target>Carla:x42 Instrument Tuner:Audio Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Audio Gain (Mono):Audio Output 1</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_RL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Audio Gain (Mono):Audio Output 1</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_RR</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:x42 Instrument Tuner:Audio output</Source>
+   <Target>SSL 2+ Surround analógico 4.0:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:x42 Instrument Tuner:Audio output</Source>
+   <Target>SSL 2+ Surround analógico 4.0:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Fluidsynth:Out L</Source>
+   <Target>SSL 2+ Surround analógico 4.0:playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Fluidsynth:Out L</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_FC</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Fluidsynth:Out R</Source>
+   <Target>SSL 2+ Surround analógico 4.0:playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Fluidsynth:Out R</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_LFE</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Deesser:Out L</Source>
+   <Target>Carla:RNNoise suppression for voice:Audio In 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Deesser:Out R</Source>
+   <Target>Carla:RNNoise suppression for voice:Audio In 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:RNNoise suppression for voice:Audio Out 1</Source>
+   <Target>Carla:Calf Gate:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:RNNoise suppression for voice:Audio Out 2</Source>
+   <Target>Carla:Calf Gate:In R</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Gate:Out L</Source>
+   <Target>Carla:Audio Gain (Stereo):Audio Input 1</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Gate:Out R</Source>
+   <Target>Carla:Audio Gain (Stereo):Audio Input 2</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Audio Gain (Stereo):Audio Output 1</Source>
+   <Target>Carla:Calf Limiter:In L</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Audio Gain (Stereo):Audio Output 2</Source>
+   <Target>Carla:Calf Limiter:In R</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Limiter:Out L</Source>
+   <Target>Carla:autotune L:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:Calf Limiter:Out R</Source>
+   <Target>Carla:autotune R:Input</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:autotune L:Output</Source>
+   <Target>SSL 2+ Surround analógico 4.0:playback_RL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:autotune L:Output</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_FL</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:autotune R:Output</Source>
+   <Target>SSL 2+ Surround analógico 4.0:playback_RR</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:autotune R:Output</Source>
+   <Target>Áudio interno Digital Surround 7.1 (HDMI 2):playback_FR</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Arturia Arturia MiniLab mkII at usb-0000:08:00-0-2-3-1- full speed:(capture_0) Arturia MiniLab mkII MIDI 1</Source>
+   <Target>Carla:MIDI CH 1 - Synth:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Arturia Arturia MiniLab mkII at usb-0000:08:00-0-2-3-1- full speed:(capture_0) Arturia MiniLab mkII MIDI 1</Source>
+   <Target>Carla:MIDI CH3 - chords:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Midi-Bridge:Arturia Arturia MiniLab mkII at usb-0000:08:00-0-2-3-1- full speed:(capture_0) Arturia MiniLab mkII MIDI 1</Source>
+   <Target>Carla:Audio Gain (Mono):events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:MIDI CH 1 - Synth:events-out</Source>
+   <Target>Carla:Calf Fluidsynth:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:MIDI CH3 - chords:events-out</Source>
+   <Target>Carla:MIDI Chord:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:MIDI Chord:events-out</Source>
+   <Target>Carla:Calf Fluidsynth:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:MIDI CH 2 - autontune:events-out</Source>
+   <Target>Carla:autotune L:events-in</Target>
+  </Connection>
+  <Connection>
+   <Source>Carla:MIDI CH 2 - autontune:events-out</Source>
+   <Target>Carla:autotune R:events-in</Target>
+  </Connection>
+  <Positions>
+   <Position x1="1022" y1="102" x2="2672" y2="156">
+    <Name>Carla</Name>
+   </Position>
+   <Position x1="1834" y1="5" x2="2074" y2="1274">
+    <Name>SSL 2+ Estéreo digital (IEC958)</Name>
+   </Position>
+   <Position x1="2024" y1="1471" x2="2179" y2="1609">
+    <Name>Áudio interno Estéreo analógico</Name>
+   </Position>
+   <Position x1="1550" y1="1644" x2="1558" y2="0">
+    <Name>Áudio interno Digital Surround 7.1 (HDMI 2)</Name>
+   </Position>
+   <Position x1="1687" y1="306">
+    <Name>SSL 2+ Surround analógico 4.0</Name>
+   </Position>
+   <Position x1="1911" y1="470" x2="1792" y2="1272">
+    <Name>Midi-Bridge</Name>
+   </Position>
+  </Positions>
+ </ExternalPatchbay>
+</CARLA-PROJECT>
