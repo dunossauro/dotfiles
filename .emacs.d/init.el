@@ -2,8 +2,10 @@
 
 ;; dead keys
 (require 'iso-transl)
+
 ;; Remove welcome message
 (setq inhibit-startup-message t)
+
 ;; Remove menus
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -16,7 +18,7 @@
 (global-hl-line-mode)
 
 ;; Font size
-(set-face-attribute 'default nil :height 150)
+(set-face-attribute 'default nil :font "DejaVu Sans Mono Book" :height 150)
 
 ;; cancel auto-save and backups
 (setq auto-save-default nil)
@@ -66,6 +68,14 @@
   (dashboard-setup-startup-hook))
 (setq dashboard-org-agenda-categories '("Tasks"))
 
+;; ---- emojis
+
+(use-package emojify
+  :ensure t
+  :hook (after-init . global-emojify-mode))
+
+(add-hook 'after-init-hook #'global-emojify-mode)
+
 ;; ---- auto-complete
 
 ; snippets from autocomplete
@@ -82,10 +92,6 @@
   (setq company-minimum-prefix-length 1)
   (global-company-mode t))
 
-
-(use-package try
-  :ensure t)
-
 (use-package spaceline
   :ensure t)
 
@@ -101,10 +107,6 @@
   :ensure t)
 
 ;; ----
-
-(use-package ace-window
-  :ensure t
-  :bind (("C-x o" . ace-window)))
 
 (use-package rebecca-theme
   :ensure t
@@ -194,25 +196,6 @@
   ("C-<prior>" . centaur-tabs-backward)
   ("C-<next>" . centaur-tabs-forward))
 
-(use-package emmet-mode
-  :ensure t)
-
-(use-package multiple-cursors
-  :ensure t
-  :config
-  (progn
-    (global-set-key (kbd "M-S-<down>") 'mc/edit-lines)
-    (global-set-key (kbd "C-S-<up>") 'mc/mark-previous-like-this)
-    (global-set-key (kbd "C-S-<down>") 'mc/mark-next-like-this)
-    (global-set-key (kbd "M-S-<left>") 'mc/mark-all-like-this)))
-
-;; ----------- Python config
-(use-package poetry
-  :ensure t
-  :hook
-  ;; activate poetry-tracking-mode when python-mode is active
-  (python-mode . poetry-tracking-mode)
-  )
 
 ;; ----------- Syntax checker
 
@@ -239,8 +222,11 @@
 (setq
   ispell-program-name
   "/usr/bin/hunspell")
+
 (require 'flyspell)
+
 (add-hook 'text-mode-hook 'flyspell-mode)
+
 (eval-after-load "flyspell"
   '(progn
      (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
@@ -340,21 +326,18 @@
 (global-unset-key (kbd "M-a"))
 (global-unset-key (kbd "C-e"))
 (global-set-key (kbd "C-<dead-grave>") 'vterm-toggle)
+(global-set-key (kbd "C-`") 'vterm-toggle)
 (global-set-key (kbd "C-e") 'eval-buffer)
-(global-set-key (kbd "C-M-S-<left>") 'shrink-window-horizontally)
-(global-set-key (kbd "C-M-S-<right>") 'enlarge-window-horizontally)
-(global-set-key (kbd "C-M-S-<down>") 'enlarge-window)
-(global-set-key (kbd "C-M-S-<up>") 'shrink-window)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-;") 'comment-line)
 (global-set-key (kbd "C-l") 'select-line)
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-S-s") 'write-file)
-(global-set-key "\C-a" 'mark-whole-buffer)
-(global-set-key "\C-n" 'new-empty-buffer)
-(global-set-key "\C-k" (lambda () (interactive) (kill-buffer (current-buffer))))
-(global-set-key "\C-c\C-v" 'duplicate-line)
-(global-set-key "\C-x\C-t" 'projectile-run-vterm)
+(global-set-key (kbd "C-a") 'mark-whole-buffer)
+(global-set-key (kbd "C-n") 'new-empty-buffer)
+(global-set-key (kbd "C-k") (lambda () (interactive) (kill-buffer (current-buffer))))
+(global-set-key (kbd "C-c C-v") 'duplicate-line)
+(global-set-key (kbd "C-x C-t") 'projectile-run-vterm)
 
 (global-set-key (kbd "C-+")
                 (lambda ()
