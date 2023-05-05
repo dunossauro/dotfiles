@@ -29,3 +29,13 @@ fi
 if [ -e ~/.bashrc.aliases ] ; then
    source ~/.bashrc.aliases
 fi
+
+# Functions
+if [ -e ~/.bashrc.functions ] ; then
+   source ~/.bashrc.functions
+fi
+
+# Current project
+if [ -e ~/.bashrc.project ] ; then
+   source ~/.bashrc.project
+fi

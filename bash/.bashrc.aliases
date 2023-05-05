@@ -12,3 +12,13 @@ alias lt='exa --tree'
 alias .='echo $PWD'
 alias pshell='source $(poetry env info -p)/bin/activate'
 alias nano='nano --linenumbers '
+alias carlan="carla -n ~/desktop/carla_bkp.carxp"
+alias carla="carla ~/desktop/carla_bkp.carxp"
+
+
+pclear () {
+   podman rmi $(podman images -qa) -f
+   podman system prune --all --force
+   podman rmi --all
+   podman network prune -f
+}
