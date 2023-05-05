@@ -1,10 +1,17 @@
 [global_config]
 [keybindings]
+  create_group = <Super>n
+  group_all_toggle = <Alt><Super>g
+  broadcast_off = <Primary><Shift><Alt>g
+  broadcast_all = <Primary><Alt>g
+  help = Pause
 [profiles]
   [[default]]
-    cursor_color = "#aaaaaa"
+    font = Source Code Pro 14
+    foreground_color = "#ffffff"
     show_titlebar = False
     scrollbar_position = hidden
+    use_system_font = False
 [layouts]
   [[default]]
     [[[window0]]]
