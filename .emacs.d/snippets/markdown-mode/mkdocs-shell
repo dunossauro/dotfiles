@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: mkdocs-shell
+# key: /shell
+# --
+\`\`\`py title=">>> Terminal interativo!"
+${1:>>> exemplo()}
+\`\`\`

@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: Mkdocslinks
+# key: /link
+# --
+[${1:descrição}](${2:link}){:target="_blank"}

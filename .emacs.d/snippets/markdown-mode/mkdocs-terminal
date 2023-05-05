@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: mkdocs-shell
+# key: /terminal
+# --
+\`\`\`bash title="$ Execução no terminal!"
+$0
+\`\`\`

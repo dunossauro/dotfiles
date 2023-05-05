@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: markdown-mermaid
+# key: /mermaid
+# expand-env: ((yas-indent-line 'fixed))
+# --
+\`\`\`mermaid
+flowchart ${1:TD}
+   ${2:Variavel} --> ${3:Nome }
+\`\`\`

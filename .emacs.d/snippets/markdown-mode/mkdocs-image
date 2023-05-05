@@ -1,0 +1,5 @@
+# -*- mode: snippet -*-
+# name: mkdocs-image
+# key: /image
+# --
+![${1:descrição}](${2:link}){: .center .shadow }
