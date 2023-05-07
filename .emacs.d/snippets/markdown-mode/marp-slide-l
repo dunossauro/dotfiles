@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: marp-slidel
+# key: /slidel
+# --
+<!---
+_class: lead
+--->
+
+# ${1:Título}
+
+${2: texto}
