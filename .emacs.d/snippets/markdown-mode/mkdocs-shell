@@ -1,6 +1,6 @@
 # -*- mode: snippet -*-
-# name: mkdocs-shell
-# key: /shell
+# name: mkdocs-pyshell
+# key: /pyshell
 # --
 \`\`\`py title=">>> Terminal interativo!"
 ${1:>>> exemplo()}

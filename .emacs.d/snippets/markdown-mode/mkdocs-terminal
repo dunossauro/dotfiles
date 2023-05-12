@@ -1,7 +1,7 @@
 # -*- mode: snippet -*-
-# name: mkdocs-shell
-# key: /terminal
+# name: mkdocs-terminal
+# key: /shell
 # --
-\`\`\`bash title="$ Execução no terminal!"
-$0
+\`\`\`shell title="$ Execução no terminal!"
+${1:python -i aula_00.py}
 \`\`\`
