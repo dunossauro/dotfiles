@@ -18,15 +18,12 @@ paru -S emacs terminator dbeaver docker docker-compose lazydocker-bin act scrcpy
 paru -S marktext-bin libreoffice-fresh libreoffice-fresh-pt-br
 
 # Python
-
-paru -S pyenv
+paru -S pyenv tk
 
 # Life
-
 paru -S telegram-desktop ytmdesktop-bin
 
 # Browsers
-
 paru -S brave-bin firefox firefox-i18n-pt-br firefox-developer-edition firefox-developer-edition-i18n-pt-br google-chrome
 
 # Audio
@@ -41,22 +38,6 @@ paru -S pipewire pipewire-alsa pipewire-pulse pipewire-jack pipewire-docs xdg-de
 systemctl --user mask pulseaudio
 systemctl --user enable pipewire pipewire-pulse
 
-# Addind pipewire by default on jack system
-## Work for carla and ardor use pipewire by default
-### https://feaneron.com/2020/12/07/switching-to-pipewire/
-
-sudo touch etc/ld.so.conf.d/pipewire-jack.conf
-echo "/usr/lib/pipewire-0.3/jack" > /etc/ld.so.conf.d/pipewire-jack.conf
-sudo ldconfig
-systemctl --user enable pipewire.service pipewire-pulse.service
 
 # System
 paru -S bat exa
-
-# Fixies
-
-sudo downgrade mesa # Version 21.2.5 to Blender works
-## Interface only works on new versions
-paru -S linux linux-headers
-paru -R linux-lts linux-lts-headers
-sudo grub-mkconfig -o /boot/grub/grub.cfg
