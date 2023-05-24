@@ -6,11 +6,12 @@ python-upgrade(){
     pyenv update
 
     echo "upgrade pythons"
+    pyenv install 3.9:latest -s  # FoxDot env
     pyenv install 3.10:latest -s
     pyenv install 3.11:latest -s
     pyenv install 3.12:latest -s
 
     echo "Upgrade pipx package"
-    # pipx reinstall-all --python python3.11
+    pipx reinstall-all --python python3.11 --skip foxdot
     pipx upgrade-all
 }
