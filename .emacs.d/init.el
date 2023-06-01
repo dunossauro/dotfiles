@@ -3,11 +3,6 @@
 ;; dead keys
 (require 'iso-transl)
 
-;; Remove welcome message
-(setq inhibit-startup-message t
-      initial-buffer-choice  nil
-      initial-scratch-message nil)
-
 ;; Remove menus
 (menu-bar-mode -1)
 (tool-bar-mode -1)
@@ -16,24 +11,25 @@
 (kill-buffer "*Messages*")
 (kill-buffer "*scratch*")
 
-;; highlight actual line
-(global-hl-line-mode)
+;; modes
+(ido-mode 1)
+(cua-mode 1)
 
 ;; Font size
 (set-face-attribute 'default nil :font "DejaVu Sans Mono Book" :height 150)
 
-;; cancel auto-save and backups
-(setq auto-save-default nil)
-(setq make-backup-files nil)
-
 ;; flex buffer
 (defalias 'list-buffers 'ibuffer-other-window) ;; ibuffer default C-x C-b
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
 
-;; modes
-(ido-mode 1)
-(cua-mode 1)
+;; Remove welcome message
+(setq inhibit-startup-message t
+      initial-buffer-choice  nil
+      initial-scratch-message nil
+      ;; cancel auto-save and backups
+      auto-save-default nil
+      make-backup-files nil
+      ido-enable-flex-matching t
+      ido-everywhere t)
 
 ;; org
 (require 'org)
@@ -57,15 +53,13 @@
 (use-package dashboard
   :ensure t
   :init
-  (progn
-    (setq dashboard-items '((recents . 5)
-                            (projects . 10)))
-    (setq dashboard-banner-logo-title "Olar bb!")
-    (setq dashboard-startup-banner 'logo)
-    (setq dashboard-set-file-icons t)
-    (setq dashboard-heading-icons t)
-    (setq dashboard-set-init-info nil)
-    )
+  (setq dashboard-items '((recents . 5)
+                            (projects . 10))
+	dashboard-banner-logo-title "Olar bb!"
+	dashboard-startup-banner 'logo
+	dashboard-set-file-icons t
+	dashboard-heading-icons t
+	dashboard-set-init-info nil)
   :config
   (dashboard-setup-startup-hook))
 (setq dashboard-org-agenda-categories '("Tasks"))
@@ -88,8 +82,8 @@
 (use-package company
   :ensure t
   :config
-  (setq company-idle-delay 0)
-  (setq company-minimum-prefix-length 1)
+  (setq company-idle-delay 0
+	company-minimum-prefix-length 1)
   (global-company-mode t))
 
 (use-package spaceline
@@ -135,8 +129,8 @@
   :init
   (progn
     (ivy-mode 1)
-    (setq ivy-use-virtual-buffers t)
-    (setq enable-recursive-minibuffers t)
+    (setq ivy-use-virtual-buffers t
+	  enable-recursive-minibuffers t)
     (global-set-key "\C-f" 'swiper)
     (global-set-key (kbd "<f1> l") 'counsel-find-library)))
 
@@ -160,21 +154,17 @@
   :config
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (projectile-mode +1))
-
-
-(setq projectile-project-search-path '("~/git/"))
-(setq projectile-switch-project-action 'neotree-projectile-action)
-(setq projectile-indexing-method 'alien)
-(setq projectile-use-git-grep 1)
+  (projectile-mode +1)
+  (setq projectile-project-search-path '("~/git/")
+	projectile-switch-project-action 'neotree-projectile-action
+	projectile-indexing-method 'alien
+	projectile-use-git-grep 1))
 
 ;; Side tree
 (use-package neotree
   :ensure t
   :config
-  (progn
-    (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
-    )
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
   :bind (("C-\\". 'neotree-toggle));; atom key
   )
 
@@ -183,16 +173,15 @@
   :ensure t
   :demand
   :config
-  (progn
-    (centaur-tabs-mode t)
+  (setq centaur-tabs-style "bar"
+	centaur-tabs-set-bar 'over
+	centaur-tabs-set-modified-marker t
+	centaur-tabs-modified-marker "*"
+	centaur-tabs-set-icons t
+	centaur-tabs-height 32)
+    (centaur-tabs-change-fonts (face-attribute 'default :font) 150)
     (centaur-tabs-headline-match)
-    (setq centaur-tabs-style "bar")
-    (setq centaur-tabs-set-bar 'over)
-    (setq centaur-tabs-set-modified-marker t)
-    (setq centaur-tabs-modified-marker "*")
-    (centaur-tabs-change-fonts "arial" 160)
-    (setq centaur-tabs-set-icons t)
-    (setq centaur-tabs-height 32))
+    (centaur-tabs-mode t)
   :bind
   ("C-<prior>" . centaur-tabs-backward)
   ("C-<next>" . centaur-tabs-forward))
@@ -211,11 +200,11 @@
          flycheck-standard-error-navigation t
          flycheck-deferred-syntax-check nil)
    :config
-   ;; before install flake8 (pip install flake8)
-   (setq flycheck-python-flake8-executable "~/.local/bin/flake8")
    ;; before install pylint (pip install pylint)
+   ;; before install flake8 (pip install flake8)
    ;; after install, create config file (pylint --generate-rcfile > ~/.pylintrc)
-   (setq flycheck-python-pylint-executable "~/.local/bin/pylint")
+   (setq flycheck-python-flake8-executable "~/.local/bin/flake8"
+	 flycheck-python-pylint-executable "~/.local/bin/pylint")
    )
 
 ;; Spell
@@ -345,12 +334,14 @@
 ;; hooks
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+(add-hook 'prog-mode-hook 'hl-line-mode)
 
 (add-hook 'after-init-hook #'global-emojify-mode)
 (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
 (add-hook 'text-mode-hook 'flyspell-mode)
+(add-hook 'text-mode-hook 'hl-line-mode)
 
 (add-hook 'python-mode-hook
      '(lambda () (define-key python-mode-map (kbd "C-c C-v") 'duplicate-line)))
