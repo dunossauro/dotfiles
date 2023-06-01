@@ -184,7 +184,10 @@
     (centaur-tabs-mode t)
   :bind
   ("C-<prior>" . centaur-tabs-backward)
-  ("C-<next>" . centaur-tabs-forward))
+  ("C-<next>" . centaur-tabs-forward)
+  :hook
+  (dashboard-mode . centaur-tabs-local-mode)
+  (vterm-mode . centaur-tabs-local-mode))
 
 
 ;; ----------- Syntax checker
