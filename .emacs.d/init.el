@@ -4,15 +4,17 @@
 (require 'iso-transl)
 
 ;; Remove welcome message
-(setq inhibit-startup-message t)
+(setq inhibit-startup-message t
+      initial-buffer-choice  nil
+      initial-scratch-message nil)
 
 ;; Remove menus
 (menu-bar-mode -1)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
-
-;; line-numbers
-(global-linum-mode t)
+(setq-default message-log-max nil)
+(kill-buffer "*Messages*")
+(kill-buffer "*scratch*")
 
 ;; highlight actual line
 (global-hl-line-mode)
@@ -44,7 +46,7 @@
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives
-	     '("melpa" . "http://melpa.org/packages/"))
+             '("melpa" . "http://melpa.org/packages/"))
 (package-initialize)
 
 (unless (package-installed-p 'use-package)
@@ -57,7 +59,7 @@
   :init
   (progn
     (setq dashboard-items '((recents . 5)
-			    (projects . 10)))
+                            (projects . 10)))
     (setq dashboard-banner-logo-title "Olar bb!")
     (setq dashboard-startup-banner 'logo)
     (setq dashboard-set-file-icons t)
@@ -73,8 +75,6 @@
 (use-package emojify
   :ensure t
   :hook (after-init . global-emojify-mode))
-
-(add-hook 'after-init-hook #'global-emojify-mode)
 
 ;; ---- auto-complete
 
@@ -153,9 +153,6 @@
 (use-package diff-hl
   :ensure t)
 
-(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
-(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
-
 
 ;; Project organization
 (use-package projectile
@@ -168,7 +165,10 @@
 
 (setq projectile-project-search-path '("~/git/"))
 (setq projectile-switch-project-action 'neotree-projectile-action)
+(setq projectile-indexing-method 'alien)
+(setq projectile-use-git-grep 1)
 
+;; Side tree
 (use-package neotree
   :ensure t
   :config
@@ -178,6 +178,7 @@
   :bind (("C-\\". 'neotree-toggle));; atom key
   )
 
+;; Buffer tabs
 (use-package centaur-tabs
   :ensure t
   :demand
@@ -198,18 +199,17 @@
 
 
 ;; ----------- Syntax checker
-
 (use-package flycheck
   :ensure t
   :diminish flycheck-mode
   :init
    (setq flycheck-check-syntax-automatically '(save new-line)
-        flycheck-idle-change-delay 5.0
-        flycheck-display-errors-delay 0.9
-        flycheck-highlighting-mode 'symbols
-        flycheck-indication-mode 'left-fringe
-        flycheck-standard-error-navigation t
-        flycheck-deferred-syntax-check nil)
+         flycheck-idle-change-delay 5.0
+         flycheck-display-errors-delay 0.9
+         flycheck-highlighting-mode 'symbols
+         flycheck-indication-mode 'left-fringe
+         flycheck-standard-error-navigation t
+         flycheck-deferred-syntax-check nil)
    :config
    ;; before install flake8 (pip install flake8)
    (setq flycheck-python-flake8-executable "~/.local/bin/flake8")
@@ -224,9 +224,6 @@
   "/usr/bin/hunspell")
 
 (require 'flyspell)
-
-(add-hook 'text-mode-hook 'flyspell-mode)
-
 (eval-after-load "flyspell"
   '(progn
      (define-key flyspell-mouse-map [down-mouse-3] #'flyspell-correct-word)
@@ -279,38 +276,24 @@
 
 
 (defun duplicate-line (arg)
-  "Duplicate current line, leaving point in lower line."
   (interactive "*p")
-
-  ;; save the point for undo
   (setq buffer-undo-list (cons (point) buffer-undo-list))
-
-  ;; local variables for start and end of line
   (let ((bol (save-excursion (beginning-of-line) (point)))
         eol)
     (save-excursion
-
-      ;; don't use forward-line for this, because you would have
-      ;; to check whether you are at the end of the buffer
       (end-of-line)
       (setq eol (point))
-
-      ;; store the line and disable the recording of undo information
       (let ((line (buffer-substring bol eol))
             (buffer-undo-list t)
             (count arg))
-        ;; insert the line arg times
         (while (> count 0)
-          (newline)         ;; because there is no newline in 'line'
+          (newline)
           (insert line)
           (setq count (1- count)))
         )
 
-      ;; create the undo information
       (setq buffer-undo-list (cons (cons eol (point)) buffer-undo-list)))
-    ) ; end-of-let
-
-  ;; put the point in the lowest line and return
+    )
   (next-line arg))
 
 (defun new-empty-buffer ()
@@ -328,7 +311,7 @@
 (global-unset-key (kbd "C-y"))
 (global-set-key (kbd "C-<dead-grave>") 'vterm-toggle)
 (global-set-key (kbd "C-`") 'vterm-toggle)
-(global-set-key (kbd "C-e") 'eval-buffer)
+(global-set-key (kbd "C-S-e") 'eval-buffer)
 (global-set-key (kbd "C-y") 'yas-describe-tables)
 (global-set-key (kbd "C-<tab>") 'other-window)
 (global-set-key (kbd "C-;") 'comment-line)
@@ -340,6 +323,8 @@
 (global-set-key (kbd "C-k") (lambda () (interactive) (kill-buffer (current-buffer))))
 (global-set-key (kbd "C-c C-v") 'duplicate-line)
 (global-set-key (kbd "C-x C-t") 'projectile-run-vterm)
+(global-set-key (kbd "C-S-f") 'projectile-grep)
+(global-set-key (kbd "C-e") 'flycheck-list-errors)
 
 (global-set-key (kbd "C-+")
                 (lambda ()
@@ -357,5 +342,17 @@
 (define-key term-mode-map (kbd "C-c") 'term-kill-subjob)
 (define-key term-mode-map (kbd "C-d") 'kill-process)
 
+;; hooks
+(add-hook 'prog-mode-hook 'display-line-numbers-mode)
+(add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
+
+(add-hook 'after-init-hook #'global-emojify-mode)
+(add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
+
+(add-hook 'text-mode-hook 'display-line-numbers-mode)
+(add-hook 'text-mode-hook 'flyspell-mode)
+
 (add-hook 'python-mode-hook
      '(lambda () (define-key python-mode-map (kbd "C-c C-v") 'duplicate-line)))
+
+;; Config end
