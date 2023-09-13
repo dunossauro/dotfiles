@@ -107,14 +107,16 @@
   :ensure t
   :config (which-key-mode))
 
-(use-package all-the-icons
-  :ensure t)
-
 ;; ----
 
 (use-package rebecca-theme
   :ensure t
   :config  (load-theme #'rebecca t))
+
+;(use-package timu-macos-theme
+;  :ensure t
+;  :config
+;  (load-theme 'timu-macos t))
 
 (use-package counsel
   :ensure t)
@@ -145,7 +147,10 @@
     (global-set-key (kbd "<f1> l") 'counsel-find-library)))
 
 (use-package markdown-mode
-  :ensure t)
+  :ensure t
+  :hook (markdown-mode . lsp)
+  :config
+  (require 'lsp-marksman))
 
 ;; ----------- Git config
 
@@ -179,6 +184,8 @@
   )
 
 ;; Buffer tabs
+(global-unset-key (kbd "C-x <prior>"))
+(global-unset-key (kbd "C-x <next>"))
 (use-package centaur-tabs
   :ensure t
   :demand
@@ -189,12 +196,12 @@
 	centaur-tabs-modified-marker "*"
 	centaur-tabs-set-icons t
 	centaur-tabs-height 32)
-    (centaur-tabs-change-fonts (face-attribute 'default :font) 150)
-    (centaur-tabs-headline-match)
-    (centaur-tabs-mode t)
+  (centaur-tabs-change-fonts (face-attribute 'default :font) 150)
+  (centaur-tabs-headline-match)
+  (centaur-tabs-mode t)
   :bind
-  ("C-<prior>" . centaur-tabs-backward)
-  ("C-<next>" . centaur-tabs-forward)
+  ("C-x <prior>" . centaur-tabs-backward)
+  ("C-x <next>" . centaur-tabs-forward)
   :hook
   (dashboard-mode . centaur-tabs-local-mode)
   (vterm-mode . centaur-tabs-local-mode))
@@ -313,6 +320,7 @@
 (global-unset-key (kbd "C-y"))
 (global-set-key (kbd "C-<dead-grave>") 'vterm-toggle)
 (global-set-key (kbd "C-`") 'vterm-toggle)
+(global-set-key (kbd "C-'") 'vterm-toggle)
 (global-set-key (kbd "C-S-e") 'eval-buffer)
 (global-set-key (kbd "C-y") 'yas-describe-tables)
 (global-set-key (kbd "C-<tab>") 'other-window)
@@ -344,15 +352,59 @@
 (define-key term-mode-map (kbd "C-c") 'term-kill-subjob)
 (define-key term-mode-map (kbd "C-d") 'kill-process)
 
+;; Markdown custom faces
+(custom-set-faces
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8 :foreground "#A3BE8C" :weight extra-bold))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4 :foreground "#EBCB8B" :weight extra-bold))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2 :foreground "#D08770" :weight extra-bold))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.15 :foreground "#BF616A" :weight extra-bold))))
+ '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.11 :foreground "#b48ead" :weight extra-bold))))
+ '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.06 :foreground "#5e81ac" :weight extra-bold))))
+)
+
+(defvar nb/current-line '(0 . 0)
+   "(start . end) of current line in current buffer")
+ (make-variable-buffer-local 'nb/current-line)
+
+ (defun nb/unhide-current-line (limit)
+   "Font-lock function"
+   (let ((start (max (point) (car nb/current-line)))
+         (end (min limit (cdr nb/current-line))))
+     (when (< start end)
+       (remove-text-properties start end
+                       '(invisible t display "" composition ""))
+       (goto-char limit)
+       t)))
+
+ (defun nb/refontify-on-linemove ()
+   "Post-command-hook"
+   (let* ((start (line-beginning-position))
+          (end (line-beginning-position 2))
+          (needs-update (not (equal start (car nb/current-line)))))
+     (setq nb/current-line (cons start end))
+     (when needs-update
+       (font-lock-fontify-block 3))))
+
+ (defun nb/markdown-unhighlight ()
+   "Enable markdown concealling"
+   (interactive)
+   (markdown-toggle-markup-hiding 'toggle)
+   (font-lock-add-keywords nil '((nb/unhide-current-line)) t)
+   (add-hook 'post-command-hook #'nb/refontify-on-linemove nil t))
+
 ;; hooks
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
 (add-hook 'prog-mode-hook 'turn-on-diff-hl-mode)
 (add-hook 'prog-mode-hook 'hl-line-mode)
 
+;; Markdown
+;(add-hook 'markdown-mode-hook #'nb/markdown-unhighlight)
+
 (add-hook 'after-init-hook #'global-emojify-mode)
 (add-hook 'vc-dir-mode-hook 'turn-on-diff-hl-mode)
 
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
+; install hunspell-pt-br on aur
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'hl-line-mode)
 
