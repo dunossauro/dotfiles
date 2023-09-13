@@ -35,6 +35,9 @@
       ido-enable-flex-matching t
       ido-everywhere t)
 
+;; Update changed buffers
+(global-auto-revert-mode t)
+
 ;; org
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
@@ -89,6 +92,9 @@
   (setq company-idle-delay 0
 	company-minimum-prefix-length 1)
   (global-company-mode t))
+
+(use-package all-the-icons
+  :ensure t)
 
 (use-package spaceline
   :ensure t)
