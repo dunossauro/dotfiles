@@ -1,75 +1,17 @@
-;; --------- Emacs GUI config
+;; load my configuration path
+(add-to-list 'load-path "~/.emacs.d/config/")
 
-;; dead keys
-(require 'iso-transl)
-
-;; Remove menus
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(scroll-bar-mode -1)
-(setq-default message-log-max nil)
-(kill-buffer "*Messages*")
-
-;; window size
-(add-to-list 'default-frame-alist '(height . 26))
-(add-to-list 'default-frame-alist '(width . 89))
-
-;; modes
-(ido-mode 1)
-(cua-mode 1)
-(display-time-mode 1)
-
-;; Font size
-(set-face-attribute 'default nil :font "DejaVu Sans Mono Book" :height 220)
-
-;; flex buffer
-(defalias 'list-buffers 'ibuffer-other-window) ;; ibuffer default C-x C-b
-
-;; Remove welcome message
-(setq inhibit-startup-message t
-      initial-buffer-choice  nil
-      initial-scratch-message nil
-      ;; cancel auto-save and backups
-      auto-save-default nil
-      make-backup-files nil
-      ido-enable-flex-matching t
-      ido-everywhere t)
-
-;; Update changed buffers
-(global-auto-revert-mode t)
+;; Load my splited configuration
+(require 'gui-config)
+(require 'melpa-config)
+(require 'dashboard-config)
+(require 'markdown-config)
 
 ;; org
 (require 'org)
 (define-key global-map "\C-cl" 'org-store-link)
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
-
-;; --------- melpa stuff
-
-(require 'package)
-(setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
-(package-initialize)
-
-(unless (package-installed-p 'use-package)
-  (package-refresh-contents)
-  (package-install 'use-package))
-
-;; --------- external melpa packages
-(use-package dashboard
-  :ensure t
-  :init
-  (setq dashboard-items '((recents . 5)
-                            (projects . 10))
-	dashboard-banner-logo-title "Olar bb!"
-	dashboard-startup-banner 'logo
-	dashboard-set-file-icons t
-	dashboard-heading-icons t
-	dashboard-set-init-info nil)
-  :config
-  (dashboard-setup-startup-hook))
-(setq dashboard-org-agenda-categories '("Tasks"))
 
 ;; ---- emojis
 
@@ -145,12 +87,6 @@
 	  enable-recursive-minibuffers t)
     (global-set-key "\C-f" 'swiper)
     (global-set-key (kbd "<f1> l") 'counsel-find-library)))
-
-(use-package markdown-mode
-  :ensure t
-  :hook (markdown-mode . lsp)
-  :config
-  (require 'lsp-marksman))
 
 ;; ----------- Git config
 
@@ -229,8 +165,8 @@
 
 ;; Spell
 (setq
-  ispell-program-name
-  "/usr/bin/hunspell")
+    ispell-program-name "/usr/bin/hunspell"
+    ispell-dictionary "pt_BR")
 
 (require 'flyspell)
 (eval-after-load "flyspell"
@@ -351,46 +287,6 @@
 (require 'term)
 (define-key term-mode-map (kbd "C-c") 'term-kill-subjob)
 (define-key term-mode-map (kbd "C-d") 'kill-process)
-
-;; Markdown custom faces
-(custom-set-faces
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8 :foreground "#A3BE8C" :weight extra-bold))))
- '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4 :foreground "#EBCB8B" :weight extra-bold))))
- '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2 :foreground "#D08770" :weight extra-bold))))
- '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.15 :foreground "#BF616A" :weight extra-bold))))
- '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.11 :foreground "#b48ead" :weight extra-bold))))
- '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.06 :foreground "#5e81ac" :weight extra-bold))))
-)
-
-(defvar nb/current-line '(0 . 0)
-   "(start . end) of current line in current buffer")
- (make-variable-buffer-local 'nb/current-line)
-
- (defun nb/unhide-current-line (limit)
-   "Font-lock function"
-   (let ((start (max (point) (car nb/current-line)))
-         (end (min limit (cdr nb/current-line))))
-     (when (< start end)
-       (remove-text-properties start end
-                       '(invisible t display "" composition ""))
-       (goto-char limit)
-       t)))
-
- (defun nb/refontify-on-linemove ()
-   "Post-command-hook"
-   (let* ((start (line-beginning-position))
-          (end (line-beginning-position 2))
-          (needs-update (not (equal start (car nb/current-line)))))
-     (setq nb/current-line (cons start end))
-     (when needs-update
-       (font-lock-fontify-block 3))))
-
- (defun nb/markdown-unhighlight ()
-   "Enable markdown concealling"
-   (interactive)
-   (markdown-toggle-markup-hiding 'toggle)
-   (font-lock-add-keywords nil '((nb/unhide-current-line)) t)
-   (add-hook 'post-command-hook #'nb/refontify-on-linemove nil t))
 
 ;; hooks
 (add-hook 'prog-mode-hook 'display-line-numbers-mode)
