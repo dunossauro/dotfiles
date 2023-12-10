@@ -1,37 +1,74 @@
 {
     "session_name": "curso",
-    "session_create_time": "13/09/2023 18:38:29",
+    "session_create_time": "12/10/2023, 11:31:28 AM",
     "active_workspace_index": 0,
     "x_session_config_objects": [
         {
-            "window_id": "0x2800144",
+            "window_id": "0x200003e",
             "desktop_number": 0,
-            "pid": 186975,
+            "pid": 19337,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 2089,
-                "y_offset": 45,
-                "width": 1529,
-                "height": 921
+                "x_offset": 3840,
+                "y_offset": 32,
+                "width": 1280,
+                "height": 1048
             },
-            "client_machine_name": "babbage",
-            "window_title": "*dashboard* - GNU Emacs at babbage",
+            "client_machine_name": "melville",
+            "window_title": "gnome move window to center of screen - Pesquisa Google — Mozilla Firefox",
+            "app_name": "Firefox Web Browser",
+            "wm_class": "firefox",
+            "wm_class_instance": "Navigator",
+            "cmd": [
+                "/usr/lib/firefox/firefox"
+            ],
+            "process_create_time": "dom dez 10 11:22:37 2023",
+            "window_state": {
+                "is_sticky": false,
+                "is_above": false,
+                "meta_maximized": 0
+            },
+            "windows_count": 1,
+            "cpu_percent": "17.8",
+            "memory_percent": "1.5",
+            "desktop_file_id": "firefox.desktop",
+            "desktop_file_id_full_path": "/usr/share/applications/firefox.desktop",
+            "monitor_number": 0,
+            "is_on_primary_monitor": true,
+            "fullscreen": false,
+            "minimized": false,
+            "compositor_type": "X11"
+        },
+        {
+            "window_id": "0x2400144",
+            "desktop_number": 0,
+            "pid": 19322,
+            "username": "dunossauro",
+            "window_position": {
+                "provider": "Meta",
+                "x_offset": 2115,
+                "y_offset": 80,
+                "width": 1529,
+                "height": 920
+            },
+            "client_machine_name": "melville",
+            "window_title": "*dashboard* - GNU Emacs at melville",
             "app_name": "Emacs",
             "wm_class": "Emacs",
             "wm_class_instance": "emacs",
             "cmd": [
                 "/usr/bin/emacs"
             ],
-            "process_create_time": "qua set 13 18:38:01 2023",
+            "process_create_time": "dom dez 10 11:22:37 2023",
             "window_state": {
                 "is_sticky": true,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "31.2",
-            "memory_percent": "0.8",
+            "cpu_percent": "1.6",
+            "memory_percent": "0.3",
             "desktop_file_id": "emacs.desktop",
             "desktop_file_id_full_path": "/usr/share/applications/emacs.desktop",
             "monitor_number": 2,
@@ -41,36 +78,36 @@
             "compositor_type": "X11"
         },
         {
-            "window_id": "0x2c00003",
+            "window_id": "0x2e00003",
             "desktop_number": 0,
-            "pid": 186980,
+            "pid": 19325,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 2086,
-                "y_offset": 44,
-                "width": 1528,
-                "height": 933
+                "x_offset": 2113,
+                "y_offset": 72,
+                "width": 1533,
+                "height": 935
             },
-            "client_machine_name": "babbage",
+            "client_machine_name": "melville",
             "window_title": "Beekeeper-Studio",
             "app_name": "Beekeeper Studio",
             "wm_class": "beekeeper-studio",
             "wm_class_instance": "beekeeper-studio",
             "cmd": [
-                "/opt/Beekeeper",
-                "Studio/beekeeper-studio-bin",
-                "--enable-crashpad"
+                "/usr/lib/electron18/electron",
+                "--enable-crashpad",
+                "/usr/lib/beekeeper-studio/app.asar"
             ],
-            "process_create_time": "qua set 13 18:38:01 2023",
+            "process_create_time": "dom dez 10 11:22:37 2023",
             "window_state": {
                 "is_sticky": true,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "8.0",
-            "memory_percent": "0.9",
+            "cpu_percent": "0.3",
+            "memory_percent": "0.4",
             "desktop_file_id": "beekeeper-studio.desktop",
             "desktop_file_id_full_path": "/usr/share/applications/beekeeper-studio.desktop",
             "monitor_number": 2,
@@ -80,19 +117,19 @@
             "compositor_type": "X11"
         },
         {
-            "window_id": "0x2200008",
+            "window_id": "0x2200003",
             "desktop_number": 0,
-            "pid": 186968,
+            "pid": 19327,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 2086,
-                "y_offset": 41,
-                "width": 1532,
-                "height": 934
+                "x_offset": 2112,
+                "y_offset": 70,
+                "width": 1535,
+                "height": 939
             },
-            "client_machine_name": "babbage",
-            "window_title": "dunossauro@babbage:~",
+            "client_machine_name": "melville",
+            "window_title": "dunossauro@melville:~",
             "app_name": "Terminator",
             "wm_class": "Terminator",
             "wm_class_instance": "terminator",
@@ -100,15 +137,15 @@
                 "/usr/bin/python",
                 "/usr/bin/terminator"
             ],
-            "process_create_time": "qua set 13 18:38:01 2023",
+            "process_create_time": "dom dez 10 11:22:37 2023",
             "window_state": {
                 "is_sticky": true,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "2.2",
-            "memory_percent": "0.4",
+            "cpu_percent": "0.1",
+            "memory_percent": "0.2",
             "desktop_file_id": "terminator.desktop",
             "desktop_file_id_full_path": "/usr/share/applications/terminator.desktop",
             "monitor_number": 2,
@@ -118,19 +155,19 @@
             "compositor_type": "X11"
         },
         {
-            "window_id": "0x1a0003e",
+            "window_id": "0x1e00046",
             "desktop_number": 0,
-            "pid": 186971,
+            "pid": 19329,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 2082,
-                "y_offset": 35,
-                "width": 1538,
+                "x_offset": 2108,
+                "y_offset": 66,
+                "width": 1544,
                 "height": 948
             },
-            "client_machine_name": "babbage",
-            "window_title": "Mozilla Firefox",
+            "client_machine_name": "melville",
+            "window_title": "Firefox Developer Edition",
             "app_name": "Firefox Developer Edition",
             "wm_class": "firefoxdeveloperedition",
             "wm_class_instance": "Navigator",
@@ -138,15 +175,15 @@
                 "/usr/lib/firefox-developer-edition/firefox",
                 "--class=firefoxdeveloperedition"
             ],
-            "process_create_time": "qua set 13 18:38:01 2023",
+            "process_create_time": "dom dez 10 11:22:37 2023",
             "window_state": {
                 "is_sticky": true,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "21.1",
-            "memory_percent": "2.5",
+            "cpu_percent": "2.1",
+            "memory_percent": "1.4",
             "desktop_file_id": "firefoxdeveloperedition.desktop",
             "desktop_file_id_full_path": "/usr/share/applications/firefoxdeveloperedition.desktop",
             "monitor_number": 2,
@@ -156,91 +193,9 @@
             "compositor_type": "X11"
         },
         {
-            "window_id": "0x180003e",
+            "window_id": "0x2600009",
             "desktop_number": 0,
-            "pid": 164889,
-            "username": "dunossauro",
-            "window_position": {
-                "provider": "Meta",
-                "x_offset": 3840,
-                "y_offset": 32,
-                "width": 1280,
-                "height": 1048
-            },
-            "client_machine_name": "babbage",
-            "window_title": "Autenticação e Autorização com JWT - FastAPI do Zero — Mozilla Firefox",
-            "app_name": "Navegador Web Firefox",
-            "wm_class": "firefox",
-            "wm_class_instance": "Navigator",
-            "cmd": [
-                "/usr/lib/firefox/firefox"
-            ],
-            "process_create_time": "qua set 13 16:33:05 2023",
-            "window_state": {
-                "is_sticky": false,
-                "is_above": false,
-                "meta_maximized": 2
-            },
-            "windows_count": 1,
-            "cpu_percent": "3.4",
-            "memory_percent": "3.1",
-            "desktop_file_id": "firefox.desktop",
-            "desktop_file_id_full_path": "/usr/share/applications/firefox.desktop",
-            "monitor_number": 0,
-            "is_on_primary_monitor": true,
-            "fullscreen": false,
-            "minimized": false,
-            "window_tiling": {
-                "window_tile_for": {
-                    "app_name": "OBS Studio",
-                    "desktop_file_id": "com.obsproject.Studio.desktop",
-                    "desktop_file_id_full_path": "/usr/share/applications/com.obsproject.Studio.desktop",
-                    "window_title": "OBS 29.1.3-tytan652-4 - Perfil: Youtube - Cenas: course rec"
-                }
-            },
-            "compositor_type": "X11"
-        },
-        {
-            "window_id": "0x2400672",
-            "desktop_number": 0,
-            "pid": 164934,
-            "username": "dunossauro",
-            "window_position": {
-                "provider": "Meta",
-                "x_offset": 0,
-                "y_offset": 0,
-                "width": 1920,
-                "height": 1080
-            },
-            "client_machine_name": "babbage",
-            "window_title": "Projetor em tela cheia (prévia)",
-            "app_name": "OBS Studio",
-            "wm_class": "obs",
-            "wm_class_instance": "obs",
-            "cmd": [
-                "/usr/bin/obs"
-            ],
-            "process_create_time": "qua set 13 16:33:06 2023",
-            "window_state": {
-                "is_sticky": true,
-                "is_above": false,
-                "meta_maximized": 0
-            },
-            "windows_count": 2,
-            "cpu_percent": "29.6",
-            "memory_percent": "2.8",
-            "desktop_file_id": "com.obsproject.Studio.desktop",
-            "desktop_file_id_full_path": "/usr/share/applications/com.obsproject.Studio.desktop",
-            "monitor_number": 1,
-            "is_on_primary_monitor": false,
-            "fullscreen": true,
-            "minimized": false,
-            "compositor_type": "X11"
-        },
-        {
-            "window_id": "0x240000b",
-            "desktop_number": 0,
-            "pid": 164934,
+            "pid": 19341,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
@@ -249,37 +204,29 @@
                 "width": 1280,
                 "height": 1048
             },
-            "client_machine_name": "babbage",
-            "window_title": "OBS 29.1.3-tytan652-4 - Perfil: Youtube - Cenas: course rec",
+            "client_machine_name": "melville",
+            "window_title": "OBS 30.0.0 - Perfil: Untitled - Cenas: Twitch",
             "app_name": "OBS Studio",
             "wm_class": "obs",
             "wm_class_instance": "obs",
             "cmd": [
                 "/usr/bin/obs"
             ],
-            "process_create_time": "qua set 13 16:33:06 2023",
+            "process_create_time": "dom dez 10 11:22:37 2023",
             "window_state": {
                 "is_sticky": false,
                 "is_above": false,
-                "meta_maximized": 0
+                "meta_maximized": 2
             },
-            "windows_count": 2,
-            "cpu_percent": "29.6",
-            "memory_percent": "2.8",
+            "windows_count": 1,
+            "cpu_percent": "98.5",
+            "memory_percent": "1.8",
             "desktop_file_id": "com.obsproject.Studio.desktop",
             "desktop_file_id_full_path": "/usr/share/applications/com.obsproject.Studio.desktop",
             "monitor_number": 0,
             "is_on_primary_monitor": true,
             "fullscreen": false,
             "minimized": false,
-            "window_tiling": {
-                "window_tile_for": {
-                    "app_name": "Navegador Web Firefox",
-                    "desktop_file_id": "firefox.desktop",
-                    "desktop_file_id_full_path": "/usr/share/applications/firefox.desktop",
-                    "window_title": "Autenticação e Autorização com JWT - FastAPI do Zero — Mozilla Firefox"
-                }
-            },
             "compositor_type": "X11"
         }
     ]
