@@ -4,8 +4,8 @@
   :bind (:map markdown-mode-map
          ("C-c C-e" . markdown-do))
   :config
-  (require 'lsp-marksman))
-
+  (require 'lsp-marksman)
+  (setq markdown-fontify-code-blocks-natively t))
 
 ;; Markdown custom faces
 (custom-set-faces
