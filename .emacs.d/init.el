@@ -324,25 +324,3 @@
 
 (add-hook 'python-mode-hook
      '(lambda () (define-key python-mode-map (kbd "C-c C-v") 'duplicate-line)))
-
-;; Config end
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-safe-themes
-   '("9724b3abaf500b227faa036dcf817abed9764802835ba6e8d1e475c877205157" default))
- '(package-selected-packages
-   '(origami prometheus-mode docker-compose-mode dockerfile-mode capputin-theme rebbeca-theme emmet-mode yaml-mode imenu-list yasnippet which-key vterm-toggle spaceline rebecca-theme projectile neotree move-text magit lsp-ui lsp-pyright flycheck-inline emojify diff-hl dashboard counsel company centaur-tabs all-the-icons)))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8 :foreground "#A3BE8C" :weight extra-bold))))
- '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4 :foreground "#EBCB8B" :weight extra-bold))))
- '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2 :foreground "#D08770" :weight extra-bold))))
- '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.15 :foreground "#BF616A" :weight extra-bold))))
- '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.11 :foreground "#b48ead" :weight extra-bold))))
- '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.06 :foreground "#5e81ac" :weight extra-bold)))))
