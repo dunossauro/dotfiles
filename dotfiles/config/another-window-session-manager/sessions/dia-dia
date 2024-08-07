@@ -1,118 +1,118 @@
 {
     "session_name": "dia-dia",
-    "session_create_time": "13/09/2023 15:47:15",
+    "session_create_time": "12/18/2023, 4:40:19 AM",
     "active_workspace_index": 0,
     "x_session_config_objects": [
         {
-            "window_id": "0x180003e",
+            "window_id": 4292818116,
             "desktop_number": 0,
-            "pid": 158279,
+            "pid": 3176,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 4,
-                "y_offset": 42,
+                "x_offset": 1935,
+                "y_offset": 46,
                 "width": 1668,
                 "height": 1032
             },
-            "client_machine_name": "babbage",
+            "client_machine_name": "melville",
             "window_title": "Mozilla Firefox",
-            "app_name": "Navegador Web Firefox",
+            "app_name": "Firefox Web Browser",
             "wm_class": "firefox",
             "wm_class_instance": "Navigator",
             "cmd": [
                 "/usr/lib/firefox/firefox"
             ],
-            "process_create_time": "qua set 13 15:46:59 2023",
+            "process_create_time": "seg dez 18 04:40:04 2023",
             "window_state": {
                 "is_sticky": false,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "34.9",
-            "memory_percent": "2.5",
+            "cpu_percent": "10.8",
+            "memory_percent": "1.2",
             "desktop_file_id": "firefox.desktop",
             "desktop_file_id_full_path": "/usr/share/applications/firefox.desktop",
-            "monitor_number": 0,
+            "monitor_number": 1,
             "is_on_primary_monitor": true,
             "fullscreen": false,
             "minimized": false,
-            "compositor_type": "X11"
+            "compositor_type": "Wayland"
         },
         {
-            "window_id": "0x2400005",
+            "window_id": 4292818118,
             "desktop_number": 0,
-            "pid": 153200,
+            "pid": 3305,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 1678,
-                "y_offset": 40,
+                "x_offset": 3623,
+                "y_offset": 32,
                 "width": 478,
-                "height": 1035
+                "height": 1048
             },
-            "client_machine_name": "babbage",
-            "window_title": "BERRINI - Molho Negro",
+            "client_machine_name": "melville",
+            "window_title": "YouTube Music",
             "app_name": "Ytmdesktop",
             "wm_class": "youtube-music-desktop-app",
             "wm_class_instance": "youtube-music-desktop-app",
             "cmd": [
                 "/app/ytmdesktop/youtube-music-desktop-app"
             ],
-            "process_create_time": "qua set 13 15:43:49 2023",
+            "process_create_time": "seg dez 18 04:40:04 2023",
             "window_state": {
                 "is_sticky": false,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "9.1",
-            "memory_percent": "1.1",
+            "cpu_percent": "5.3",
+            "memory_percent": "0.5",
             "desktop_file_id": "app.ytmdesktop.ytmdesktop.desktop",
             "desktop_file_id_full_path": "/var/lib/flatpak/exports/share/applications/app.ytmdesktop.ytmdesktop.desktop",
-            "monitor_number": 0,
+            "monitor_number": 1,
             "is_on_primary_monitor": true,
             "fullscreen": false,
             "minimized": false,
-            "compositor_type": "X11"
+            "compositor_type": "Wayland"
         },
         {
-            "window_id": "0x1c0000b",
+            "window_id": 4292818117,
             "desktop_number": 0,
-            "pid": 152960,
+            "pid": 3251,
             "username": "dunossauro",
             "window_position": {
                 "provider": "Meta",
-                "x_offset": 2162,
+                "x_offset": 4100,
                 "y_offset": 32,
-                "width": 398,
+                "width": 380,
                 "height": 1048
             },
-            "client_machine_name": "babbage",
+            "client_machine_name": "melville",
             "window_title": "Telegram",
             "app_name": "Telegram Desktop",
-            "wm_class": "TelegramDesktop",
-            "wm_class_instance": "telegram-desktop",
+            "wm_class": "org.telegram.desktop",
+            "wm_class_instance": "org.telegram.desktop",
             "cmd": [
-                "/usr/bin/telegram-desktop"
+                "/app/bin/telegram-desktop"
             ],
-            "process_create_time": "qua set 13 15:41:49 2023",
+            "process_create_time": "seg dez 18 04:40:04 2023",
             "window_state": {
                 "is_sticky": false,
                 "is_above": false,
                 "meta_maximized": 0
             },
             "windows_count": 1,
-            "cpu_percent": "12.7",
-            "memory_percent": "3.8",
+            "cpu_percent": "7.9",
+            "memory_percent": "1.0",
             "desktop_file_id": "org.telegram.desktop.desktop",
-            "desktop_file_id_full_path": "/usr/share/applications/org.telegram.desktop.desktop",
-            "monitor_number": 0,
+            "desktop_file_id_full_path": "/var/lib/flatpak/exports/share/applications/org.telegram.desktop.desktop",
+            "monitor_number": 1,
             "is_on_primary_monitor": true,
             "fullscreen": false,
             "minimized": false,
-            "compositor_type": "X11"
+            "compositor_type": "Wayland"
         }
     ]
 }

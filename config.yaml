@@ -44,6 +44,9 @@ dotfiles:
   d_terminator:
     src: config/terminator
     dst: ~/.config/terminator
+  d_sessions:
+    src: config/another-window-session-manager/sessions
+    dst: ~/.config/another-window-session-manager/sessions
 profiles:
   melville:
     dotfiles:
@@ -59,3 +62,4 @@ profiles:
     - f_bashrc.project
     - f_bashrc.python_env
     - d_terminator
+    - d_sessions
