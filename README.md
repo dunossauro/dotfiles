@@ -10,3 +10,4 @@ dotdrop install
 
 - Centralizar minhas configurações do carla em um diretório para migrar para o dotdrop
 - Ajustar a configuração do qtile (não uso a um tempo)
+- Revisitar o postinstall
