@@ -1,5 +1,7 @@
 # dotfiles
 
+Estou usando o [dotdrop](https://dotdrop.readthedocs.io/en/stable/) para gerenciar os arquivos de configuração.
+
 ```bash
 pip install pipx
 alias dotdrop='dotdrop --cfg=<this_repo>/config.yaml'
