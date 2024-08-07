@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+
+# Alias
+alias py=python
+alias ipy=ipython
+alias bpy=bpython
+alias ccat=cat
+alias cat=bat
+alias l=exa
+alias ll='exa -l'
+alias la='exa -a'
+alias l=exa
+alias ls=exa
+alias lla='exa -al'
+alias lt='exa --tree'
+alias .='echo $PWD'
+alias pshell='source $(poetry env info -p)/bin/activate'
+alias nano='nano --linenumbers '
+alias carlan="carla -n ~/desktop/carla_bkp.carxp"
+alias carla="carla ~/desktop/carla_bkp.carxp"
+alias issues="gh issue list"
+
+
+pclear () {
+   podman rmi $(podman images -qa) -f
+   podman system prune --all --force
+   podman rmi --all
+   podman network prune -f
+}

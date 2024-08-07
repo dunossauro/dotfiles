@@ -1,0 +1,11 @@
+# -*- mode: snippet -*-
+# name: marp-slide
+# key: /slide
+# --
+<style scoped>
+p {font-size: 24px;}
+</style>
+
+# ${1:Título}
+
+${2: texto}

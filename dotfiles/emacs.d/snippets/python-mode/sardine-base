@@ -1,0 +1,31 @@
+# -*- mode: snippet -*-
+# expand-env: ((yas-indent-line nil))
+# name: sardine synths
+# key: /sardine-base
+# --
+
+clock.tempo = 100
+
+@swim
+def drum(p=1, i=0):
+    again(drum, p=1 / 2, i=i + 1)
+
+
+@swim
+def pad(p=1, i=0):
+    again(pad, p=1 / 2, i=i + 1)
+
+
+@swim
+def bass(p=1, i=0):
+    again(bass, p=1, i=i + 1)
+
+
+@swim
+def lead(p=1, i=0):
+    again(lead, p=1, i=i + 1)
+
+
+@swim
+def pluck(p=1, i=0):
+    again(pluck, p=1 / 2, i=i + 1)

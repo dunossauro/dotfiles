@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+export GITDIR="/home/dunossauro/git"
+export BASH_IT="/home/dunossauro/.bash_it"
+export BASH_IT_THEME='bobby-python'
+export THEME_SHOW_PYTHON=true
+export PIPEWIRE_LATENCY=128/48000
+export PYTHON_CONFIGURE_OPTS="--enable-shared"
+source "$BASH_IT"/bash_it.sh

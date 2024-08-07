@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+LDP_PROJECT=${GITDIR}/live-de-python
+BETA_PROJECT=${GITDIR}/live-beta
+CURRENT_PROJECT=${GITDIR}/curso-python-typing
+
+
+ldp () {
+  cd $LDP_PROJECT
+}
+
+beta () {
+  cd $BETA_PROJECT
+}
+
+proj () {
+  cd $CURRENT_PROJECT
+  pshell
+}

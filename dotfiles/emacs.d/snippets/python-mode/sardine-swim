@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: sardine-swim
+# key: /swim
+# --
+
+@swim
+def ${1}(p=1, i=0):
+    $0
+    again($1, p=1, i=i + 1)
