@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: mkdocspython
-# key: /pycode
-# --
-\`\`\`py title="aula_${1:00}.py" linenums="${2:1}" hl_lines="${3:1} ${4:3}"
-${5}
-\`\`\`

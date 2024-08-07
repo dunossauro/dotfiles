@@ -1,8 +1,0 @@
-# -*- mode: snippet -*-
-# name: mkdocs-detail
-# key: /detail
-# expand-env: ((yas-indent-line 'fixed))
-# --
-
-???+ ${1:tipo} "${2:título}"
-    ${3:texto bem longo}

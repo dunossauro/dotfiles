@@ -1,7 +1,0 @@
-# -*- mode: snippet -*-
-# name: mkdocs-example
-# key: /example
-# --
-\`\`\`py title="Código de exemplo!"
-$0
-\`\`\`
