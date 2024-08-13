@@ -28,11 +28,14 @@
 (setq inhibit-startup-message t
       initial-buffer-choice  nil
       initial-scratch-message nil
+      use-dialog-box nil ; avoid system dialogs
       ;; cancel auto-save and backups
       auto-save-default nil
       make-backup-files nil
       ido-enable-flex-matching t
       ido-everywhere t)
+
+(fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Update changed buffers
 (global-auto-revert-mode t)
