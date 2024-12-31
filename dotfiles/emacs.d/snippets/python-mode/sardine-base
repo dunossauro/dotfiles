@@ -6,26 +6,26 @@
 
 clock.tempo = 100
 
-@swim
+@swim(until=None)
 def drum(p=1, i=0):
     again(drum, p=1 / 2, i=i + 1)
 
 
-@swim
+@swim(until=None)
 def pad(p=1, i=0):
     again(pad, p=1 / 2, i=i + 1)
 
 
-@swim
+@swim(until=None)
 def bass(p=1, i=0):
     again(bass, p=1, i=i + 1)
 
 
-@swim
+@swim(until=None)
 def lead(p=1, i=0):
     again(lead, p=1, i=i + 1)
 
 
-@swim
+@swim(until=None)
 def pluck(p=1, i=0):
     again(pluck, p=1 / 2, i=i + 1)
