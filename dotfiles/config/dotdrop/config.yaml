@@ -1,0 +1,65 @@
+config:
+  backup: true
+  banner: true
+  create: true
+  dotpath: dotfiles
+  keepdot: false
+  link_dotfile_default: nolink
+  link_on_import: nolink
+  longkey: false
+dotfiles:
+  d_config:
+    src: emacs.d/config
+    dst: ~/.emacs.d/config
+  f_init.el:
+    src: emacs.d/init.el
+    dst: ~/.emacs.d/init.el
+  d_snippets:
+    src: emacs.d/snippets
+    dst: ~/.emacs.d/snippets
+  f_rofidmenu.rasi:
+    src: config/rofi/rofidmenu.rasi
+    dst: ~/.config/rofi/rofidmenu.rasi
+  d_i3:
+    src: config/i3
+    dst: ~/.config/i3
+  f_bashrc:
+    src: bashrc
+    dst: ~/.bashrc
+  f_bashrc.aliases:
+    src: bashrc.aliases
+    dst: ~/.bashrc.aliases
+  f_bashrc.envvars:
+    src: bashrc.envvars
+    dst: ~/.bashrc.envvars
+  f_bashrc.functions:
+    src: bashrc.functions
+    dst: ~/.bashrc.functions
+  f_bashrc.project:
+    src: bashrc.project
+    dst: ~/.bashrc.project
+  f_bashrc.python_env:
+    src: bashrc.python_env
+    dst: ~/.bashrc.python_env
+  d_terminator:
+    src: config/terminator
+    dst: ~/.config/terminator
+  d_sessions:
+    src: config/another-window-session-manager/sessions
+    dst: ~/.config/another-window-session-manager/sessions
+profiles:
+  melville:
+    dotfiles:
+    - d_config
+    - f_init.el
+    - d_snippets
+    - f_rofidmenu.rasi
+    - d_i3
+    - f_bashrc
+    - f_bashrc.aliases
+    - f_bashrc.envvars
+    - f_bashrc.functions
+    - f_bashrc.project
+    - f_bashrc.python_env
+    - d_terminator
+    - d_sessions
