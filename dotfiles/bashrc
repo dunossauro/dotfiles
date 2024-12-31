@@ -42,5 +42,4 @@ if [ -e ~/.bashrc.project ] ; then
    source ~/.bashrc.project
 fi
 
-# Created by `pipx` on 2023-12-07 12:19:00
 export PATH="$PATH:/home/dunossauro/.local/bin"

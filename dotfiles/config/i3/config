@@ -118,6 +118,10 @@ bindsym $mod+Shift+Down move down
 bindsym $mod+Shift+Up move up
 bindsym $mod+Shift+Right move right
 
+#movie workspace
+bindsym $mod+Ctrl+greater move workspace to output right
+bindsym $mod+Ctrl+less move workspace to output left
+
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
 
