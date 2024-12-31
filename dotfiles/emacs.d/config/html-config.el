@@ -7,4 +7,10 @@
   (add-hook 'css-mode-hook 'emmet-mode)
   (add-hook 'sgml-mode-hook 'emmet-mode))
 
+(use-package simple-httpd
+  :ensure t)
+
+(use-package impatient-mode
+  :ensure t)
+
 (provide 'html-config)
