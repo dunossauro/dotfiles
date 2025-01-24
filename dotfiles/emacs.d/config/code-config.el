@@ -22,6 +22,7 @@
 
 ;; sardine
 (setq
+ ;python-shell-interpreter "/home/dunossauro/.local/bin/sardine"
  python-shell-interpreter "/home/dunossauro/.local/bin/sardine"
  python-shell-interpreter-args "")
 
@@ -97,8 +98,13 @@
 (with-eval-after-load 'flycheck
   (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
 
+;; it sucks!
+;; https://github.com/emacs-lsp/lsp-mode/issues/4679
+(setq lsp-copilot-applicable-fn (lambda (&rest _) nil))
+
 (use-package lsp-pyright ;; Python LSP
   :ensure t
+  :custom (lsp-pyright-langserver-command "basedpyright")
   :hook
   ((python-mode . (lambda ()
                     (require 'lsp-pyright)
