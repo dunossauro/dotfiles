@@ -11,9 +11,10 @@
 
     - name: dotdrop
       become: yes
-      package:
+      aur:
         name: dotdrop
         state: present
+        use: makepkg
       
     - name: instalação emacs
       become: yes
