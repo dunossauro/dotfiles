@@ -3,54 +3,60 @@
   hosts: localhost
 
   tasks:
-    - name: devel
+    - name: Instalação devel
       become: yes
       package:
         name: base-devel
         state: present
 
-    - name: paru
+    - name: Instalação nano
+      become: yes
+      package:
+        name: nano
+        state: present
+
+    - name: Instalação paru
       kewlfft.aur.aur:
-        name: paru
+        name: paru-bin
         state: present
         use: makepkg
 
-    - name: dotdrop
-      kewlfft.aur.aur:
-        use: paru
-        name: dotdrop
+    - name: Instalação libvterm
+      become: yes
+      package:
         state: present
-      
+        name: libvterm
+
     - name: instalação emacs
       become: yes
       package:
         state: present
         name: emacs
 
-    - name: dotfiles
+    - name: Cópia dotfiles
       git:
         repo: https://codeberg.org/dunossauro/dotfiles.git
         dest: dotfiles
 
-    - name: xorg
+    - name: Instalação xorg
       become: yes
       package:
         name: xorg
         state: present
 
-    - name: qtile
+    - name: Instalação qtile
       become: yes
       package:
         name: qtile
         state: present
 
-    - name: lightdm
+    - name: Instalação lightdm
       become: yes
       package:
         name: lightdm
         state: present
 
-    - name: lightdm-gtk-greeter
+    - name: Instalação lightdm-gtk-greeter
       become: yes
       package:
         name: lightdm-gtk-greeter
@@ -62,8 +68,26 @@
         enabled: true
         name: lightdm
 
-    - name: terminator
+    - name: Instalação terminator
       become: yes
       package:
         name: terminator
+        state: present
+
+    - name: Instalação telegram
+      become: yes
+      package:
+        name: telegram-desktop
+        state: present
+
+    - name: Instalação dotdrop (paru)
+      kewlfft.aur.aur:
+        use: paru
+        name: dotdrop
+        state: present
+
+    - name: Instalação waterfox (paru)
+      kewlfft.aur.aur:
+        use: paru
+        name: waterfox-bin
         state: present
