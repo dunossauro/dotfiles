@@ -62,8 +62,8 @@
         enabled: true
         name: lightdm
 
-    - name: xterm
+    - name: terminator
       become: yes
       package:
-        name: xterm
+        name: terminator
         state: present
