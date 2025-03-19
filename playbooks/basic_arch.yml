@@ -1,0 +1,62 @@
+---
+- name: Instalação inicial
+  hosts: localhost
+
+  tasks:
+    - name: devel
+      become: yes
+      package:
+        name: base-devel
+        state: present
+
+    - name: dotdrop
+      become: yes
+      package:
+        name: dotdrop
+        state: present
+      
+    - name: instalação emacs
+      become: yes
+      package:
+        state: present
+        name: emacs
+
+    - name: dotfiles
+      git:
+        repo: https://codeberg.org/dunossauro/dotfiles.git
+        dest: dotfiles
+
+    - name: xorg
+      become: yes
+      package:
+        name: xorg
+        state: present
+
+    - name: qtile
+      become: yes
+      package:
+        name: qtile
+        state: present
+
+    - name: lightdm
+      become: yes
+      package:
+        name: lightdm
+        state: present
+
+    - name: lightdm-gtk-greeter
+      become: yes
+      package:
+        name: lightdm-gtk-greeter
+        state: present
+
+    - name: Inicialização do greeter
+      systemd:
+        state: enabled
+        name: lightdm
+
+    - name: xterm
+      become: yes
+      package:
+        name: xterm
+        state: present
