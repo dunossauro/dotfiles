@@ -1,10 +1,7 @@
 ---
-- hosts: all
-  gather_facts: no
-
-  tasks:
-    - include aur.yml
-    - include coding.yml
-    - include gui.yml
-    - include python.yml
-    - include work.yml
+import_playbook: aur.yml
+import_playbook: aur.yml
+import_playbook: coding.yml
+import_playbook: gui.yml
+import_playbook: python.yml
+import_playbook: work.yml
