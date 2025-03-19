@@ -1,14 +1,10 @@
 ---
-- name: Executa todos os playbooks
-  hosts: linux
-  gather_facts: true
+- hosts: all
+  gather_facts: no
 
   tasks:
-    - name: Base
-      import_tasks: basic_arch.yml
-
-    - name: AUR
-      import_tasks: aur.yml
-
-    - name: GUI
-      import_tasks: gui.yml
+    - include aur.yml
+    - include coding.yml
+    - include gui.yml
+    - include python.yml
+    - include work.yml

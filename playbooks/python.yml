@@ -1,0 +1,49 @@
+---
+- name: Instalação das ferramentas python
+  hosts: localhost
+
+  tasks:
+    - name: Instalação pipx
+      become: yes
+      package:
+        name: python-pipx
+        state: present
+
+    - name: Instalação tk
+      become: yes
+      package:
+        name: tk
+        state: present
+
+    - name: Install basedpyright
+      community.general.pipx:
+        name: basedpyright
+
+    - name: Install poetry
+      community.general.pipx:
+        name: poetry
+
+    - name: Install mypy
+      community.general.pipx:
+        name: mypy
+
+    - name: Install blue
+      community.general.pipx:
+        name: blue
+
+    - name: Install harlequin
+      community.general.pipx:
+        name: harlequin
+
+    - name: Install ignr
+      community.general.pipx:
+        name: harlequin
+
+    - name: Install ipython
+      community.general.pipx:
+        name: ipython
+
+    - name: Clone Pyenv
+      git:
+        repo: https://github.com/pyenv/pyenv.git
+        dest: ~/.pyenv

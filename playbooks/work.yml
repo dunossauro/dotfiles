@@ -1,0 +1,28 @@
+---
+- name: Instalação das ferramentas de trabalho
+  hosts: localhost
+
+  tasks:
+    - name: Instalação gimp
+      become: yes
+      package:
+        name: gimp
+        state: present
+
+    - name: Instalação kdenlive
+      become: yes
+      package:
+        name: kdenlive
+        state: present
+
+    - name: Instalação inkscape
+      become: yes
+      package:
+        name: inkscape
+        state: present
+
+    - name: Instalação darktable
+      become: yes
+      package:
+        name: darktable
+        state: present

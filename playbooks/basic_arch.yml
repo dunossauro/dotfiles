@@ -68,17 +68,6 @@
         name: terminator
         state: present
 
-    - name: Instalação pipx
-      become: yes
-      package:
-        name: python-pipx
-        state: present
-
-    - name: Clone Pyenv
-      git:
-        repo: https://github.com/pyenv/pyenv.git
-        dest: ~/.pyenv
-
     - name: Clone bash-it
       git:
         repo: https://github.com/Bash-it/bash-it.git

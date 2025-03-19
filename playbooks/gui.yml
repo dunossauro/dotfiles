@@ -8,3 +8,21 @@
       package:
         name: telegram-desktop
         state: present
+
+    - name: Instalação libreoffice
+      become: yes
+      package:
+        name: libreoffice-fresh
+        state: present
+
+    - name: Instalação libreoffice-fresh-pt-br
+      become: yes
+      package:
+        name: libreoffice-fresh-pt-br
+        state: present
+
+    - name: Instalação scrcpy
+      become: yes
+      package:
+        name: scrcpy
+        state: present
