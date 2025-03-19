@@ -57,7 +57,8 @@
         state: present
 
     - name: Inicialização do greeter
-      systemd:
+      become: yes
+      ansible.builtin.systemd_service:
         enabled: true
         name: lightdm
 
