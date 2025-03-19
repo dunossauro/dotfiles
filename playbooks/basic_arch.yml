@@ -9,12 +9,17 @@
         name: base-devel
         state: present
 
-    - name: dotdrop
-      become: yes
-      aur:
-        name: dotdrop
+    - name: paru
+      kewlfft.aur.aur:
+        name: paru
         state: present
         use: makepkg
+
+    - name: dotdrop
+      kewlfft.aur.aur:
+        use: paru
+        name: dotdrop
+        state: present
       
     - name: instalação emacs
       become: yes
@@ -53,7 +58,7 @@
 
     - name: Inicialização do greeter
       systemd:
-        state: enabled
+        enabled: true
         name: lightdm
 
     - name: xterm
