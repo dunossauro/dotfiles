@@ -1,0 +1,22 @@
+---
+- name: Pcotes AUR
+  hosts: localhost
+
+  tasks:
+    - name: Instalação paru
+      kewlfft.aur.aur:
+        name: paru-bin
+        state: present
+        use: makepkg
+
+    - name: Instalação dotdrop (paru)
+      kewlfft.aur.aur:
+        use: paru
+        name: dotdrop
+        state: present
+
+    - name: Instalação waterfox (paru)
+      kewlfft.aur.aur:
+        use: paru
+        name: waterfox-bin
+        state: present

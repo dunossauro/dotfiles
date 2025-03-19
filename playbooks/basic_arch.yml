@@ -15,12 +15,6 @@
         name: nano
         state: present
 
-    - name: Instalação paru
-      kewlfft.aur.aur:
-        name: paru-bin
-        state: present
-        use: makepkg
-
     - name: Instalação libvterm
       become: yes
       package:
@@ -80,42 +74,12 @@
         name: python-pipx
         state: present
 
-    - name: Instalação telegram
-      become: yes
-      package:
-        name: telegram-desktop
-        state: present
-
-    - name: Instalação dotdrop (paru)
-      kewlfft.aur.aur:
-        use: paru
-        name: dotdrop
-        state: present
-
-    - name: Instalação waterfox (paru)
-      kewlfft.aur.aur:
-        use: paru
-        name: waterfox-bin
-        state: present
-
     - name: Clone Pyenv
       git:
         repo: https://github.com/pyenv/pyenv.git
         dest: ~/.pyenv
 
-    - name: config pyenv
-      blockinfile:
-        dest: ~/.bashrc
-        block: |
-          echo 'export PATH="$HOME/.pyenv/bin:$PATH"' >> ~/.bashrc
-          echo 'eval "$(pyenv init -)"' >>~/.bashrc
-          echo 'eval "$(pyenv virtualenv-init -)"' >> ~/.bashrc
-          echo 'PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
-
     - name: Clone bash-it
       git:
         repo: https://github.com/Bash-it/bash-it.git
         dest: ~/.bash_it
-
-    - name: Install bash-it
-      shell: ~/.bash_it/install.sh

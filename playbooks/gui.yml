@@ -1,0 +1,10 @@
+---
+- name: Instalação dos programas com GUI
+  hosts: localhost
+
+  tasks:
+    - name: Instalação telegram
+      become: yes
+      package:
+        name: telegram-desktop
+        state: present
