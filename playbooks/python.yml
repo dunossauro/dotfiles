@@ -9,6 +9,11 @@
         name: python-pipx
         state: present
 
+    - name: configuração pipx
+      become: yes
+      shell: pipx ensurepath
+
+
     - name: Instalação tk
       become: yes
       package:

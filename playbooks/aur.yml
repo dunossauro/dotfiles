@@ -16,7 +16,7 @@
         state: present
 
     - name: Ajusta dotdrop para nome do host
-      shell: sed -i 's/melville/archlinux/' dotfiles/config.yaml
+      shell: sed -i 's/melville/archlinux/' /home/vagrant/dotfiles/config.yaml
       # TODO: Ajustar isso
 
     - name: configura dotfiles
