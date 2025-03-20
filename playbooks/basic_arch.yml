@@ -94,4 +94,4 @@
         state: present
 
     - name: Configuração xonsh
-      run: chsh -s $(which xonsh)
+      shell: chsh -s $(which xonsh)
