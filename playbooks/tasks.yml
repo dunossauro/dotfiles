@@ -18,3 +18,6 @@
 
 - name: audio
   import_playbook: audio.yml
+
+- name: gui
+  import_playbook: gui.yml

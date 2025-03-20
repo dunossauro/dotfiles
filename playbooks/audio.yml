@@ -1,0 +1,94 @@
+---
+- name: Instalação das ferramentas de audio
+  hosts: localhost
+
+  tasks:
+    - name: Instalação pipewire
+      become: yes
+      package:
+        name: pipewire
+        state: present
+
+    - name: Instalação pipewire-alsa
+      become: yes
+      package:
+        name: pipewire-alsa
+        state: present
+
+    - name: Instalação pipewire-pulse
+      become: yes
+      package:
+        name: pipewire-pulse
+        state: present
+
+    - name: Instalação pipewire-jack
+      become: yes
+      package:
+        name: pipewire-jack
+        state: present
+
+    - name: Instalação wireplumber
+      become: yes
+      package:
+        name: wireplumber
+        state: present
+
+    - name: Instalação ardour
+      become: yes
+      package:
+        name: ardour
+        state: present
+
+    - name: Instalação carla
+      become: yes
+      package:
+        name: carla
+        state: present
+
+    - name: Instalação x42
+      become: yes
+      package:
+        name: x42-plugins
+        state: present
+
+    - name: Instalação calf
+      become: yes
+      package:
+        name: calf
+        state: present
+
+    - name: Instalação yoshimi
+      become: yes
+      package:
+        name: yoshimi
+        state: present
+
+    - name: Instalação vital-synth
+      become: yes
+      package:
+        name: vital-synth
+        state: present
+
+    - name: Instalação helvum
+      become: yes
+      package:
+        name: helvum
+        state: present
+
+    - name: Instalação lsp
+      become: yes
+      package:
+        name: lsp-plugins
+        state: present
+
+    - name: Instalação avldrums.lv2
+      become: yes
+      package:
+        name: avldrums.lv2
+        state: present
+
+    - name: Instalação distrho-ports
+      become: yes
+      package:
+        name: distrho-ports
+        state: present
