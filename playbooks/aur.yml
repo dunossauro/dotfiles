@@ -1,6 +1,7 @@
 ---
 - name: Pcotes AUR
   hosts: localhost
+
   tasks:
     - name: Instalação paru
       kewlfft.aur.aur:
@@ -15,7 +16,7 @@
         state: present
 
     - name: Ajusta dotdrop para nome do host
-      shell: sed -i 's/melville/{{ inventory_hostname }}/' dotfiles/config.yaml
+      shell: sed -i 's/melville/vagrant/' dotfiles/config.yaml
 
     - name: configura dotfiles
       shell: dotdrop install
