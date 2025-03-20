@@ -26,3 +26,9 @@
       package:
         name: darktable
         state: present
+
+    - name: Instalação blender
+      become: yes
+      package:
+        name: blender
+        state: present

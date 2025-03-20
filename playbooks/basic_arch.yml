@@ -10,6 +10,18 @@
         name: base-devel
         state: present
 
+    - name: Instalação cmake
+      become: yes
+      package:
+        name: cmake
+        state: present
+
+    - name: Instalação git
+      become: yes
+      package:
+        name: git
+        state: present
+
     - name: Instalação nano
       become: yes
       package:
