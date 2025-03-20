@@ -94,11 +94,11 @@
         state: present
 
     - name: Configuração xonsh
-      brecome: yes
+      become: yes
       become_user: vagrant
       shell: chsh -s $(which xonsh) $(whoami)
 
     - name: chown dotfiles
-      brecome: yes
+      become: yes
       become_user: vagrant
       shell: chown -R vagrant:vagrant .
