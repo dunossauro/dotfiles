@@ -10,7 +10,11 @@
 - name: coding
   import_playbook: coding.yml
 
-# TODO: Ajustar isso
-#import_playbook: gui.yml
-#import_playbook: python.yml
-#import_playbook: work.yml
+- name: python
+  import_playbook: python.yml
+
+- name: work
+  import_playbook: work.yml
+
+- name: audio
+  import_playbook: audio.yml
