@@ -16,8 +16,8 @@
 - name: gui
   import_playbook: gui.yml
 
-- name: work
-  import_playbook: work.yml
-
 - name: aur
   import_playbook: aur.yml
+
+- name: work
+  import_playbook: work.yml
