@@ -16,10 +16,12 @@
         state: present
 
     - name: Ajusta dotdrop para nome do host
-      shell: sed -i 's/melville/vagrant/' dotfiles/config.yaml
+      shell: sed -i 's/melville/archlinux/' dotfiles/config.yaml
+      # TODO: Ajustar isso
 
     - name: configura dotfiles
-      shell: dotdrop install
+      shell: dotdrop --cfg=/home/vagrant/dotfiles/config.yaml install -f
+      # TODO: Ajustar isso
 
     - name: Instalação waterfox (paru)
       kewlfft.aur.aur:

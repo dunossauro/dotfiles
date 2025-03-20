@@ -1,5 +1,5 @@
 ---
-import_playbook: aur.yml
+# TODO: Ajustar isso
 import_playbook: aur.yml
 import_playbook: coding.yml
 import_playbook: gui.yml

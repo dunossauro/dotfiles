@@ -54,6 +54,7 @@
     - name: chown dotfiles
       become: yes
       shell: chown -R vagrant:vagrant .
+      # TODO: Ajustar isso
 
     - name: Instalação xorg
       become: yes
@@ -100,3 +101,4 @@
     - name: Configuração xonsh
       become: yes
       shell: chsh -s /usr/bin/xonsh vagrant
+      # TODO: Ajustar isso
