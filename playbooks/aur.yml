@@ -14,6 +14,12 @@
         name: dotdrop
         state: present
 
+    - name: Ajusta dotdrop para nome do host
+      shell: sed -i 's/melville/{{ inventory_hostname }}/' dotfiles/config.yaml
+
+    - name: configura dotfiles
+      shell: dotdrop install
+
     - name: Instalação waterfox (paru)
       kewlfft.aur.aur:
         use: paru
