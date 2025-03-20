@@ -32,9 +32,3 @@
       package:
         name: blender
         state: present
-
-    - name: Instalação obs
-      become: yes
-      package:
-        name: obs-studio-tytan652
-        state: present

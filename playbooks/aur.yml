@@ -28,3 +28,9 @@
         use: paru
         name: waterfox-bin
         state: present
+
+    - name: Instalação obs
+      kewlfft.aur.aur:
+        use: paru
+        name: obs-studio-tytan652
+        state: present
