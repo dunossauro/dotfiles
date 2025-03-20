@@ -53,7 +53,6 @@
 
     - name: chown dotfiles
       become: yes
-      become_user: vagrant
       shell: chown -R vagrant:vagrant .
 
     - name: Instalação xorg
