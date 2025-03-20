@@ -51,6 +51,11 @@
         repo: https://codeberg.org/dunossauro/dotfiles.git
         dest: dotfiles
 
+    - name: chown dotfiles
+      become: yes
+      become_user: vagrant
+      shell: chown -R vagrant:vagrant .
+
     - name: Instalação xorg
       become: yes
       package:
@@ -95,10 +100,4 @@
 
     - name: Configuração xonsh
       become: yes
-      become_user: vagrant
       shell: chsh -s /usr/bin/xonsh vagrant
-
-    - name: chown dotfiles
-      become: yes
-      become_user: vagrant
-      shell: chown -R vagrant:vagrant .
