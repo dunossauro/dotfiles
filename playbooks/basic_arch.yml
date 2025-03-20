@@ -2,6 +2,7 @@
 - name: Instalação inicial
   hosts: localhost
 
+
   tasks:
     - name: Instalação devel
       become: yes
@@ -15,11 +16,29 @@
         name: nano
         state: present
 
+    - name: Instalação eza
+      become: yes
+      package:
+        name: eza
+        state: present
+
+    - name: Instalação bat
+      become: yes
+      package:
+        name: bat
+        state: present
+
     - name: Instalação libvterm
       become: yes
       package:
         state: present
         name: libvterm
+
+    - name: Instalação ttf-dejavu
+      become: yes
+      package:
+        state: present
+        name: ttf-dejavu
 
     - name: instalação emacs
       become: yes
@@ -68,7 +87,11 @@
         name: terminator
         state: present
 
-    - name: Clone bash-it
-      git:
-        repo: https://github.com/Bash-it/bash-it.git
-        dest: ~/.bash_it
+    - name: Instalação xonsh
+      become: yes
+      package:
+        name: xonsh
+        state: present
+
+    - name: Configuração xonsh
+      run: chsh -s $(which xonsh)
