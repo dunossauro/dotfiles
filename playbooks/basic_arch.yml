@@ -123,6 +123,8 @@
         state: present
 
     - name: Ativando pipewire
+      become: yes
+      become_user: vagrant
       ansible.builtin.systemd_service:
         name: pipewire
         enabled: true
@@ -141,10 +143,10 @@
         state: present
 
     - name: Ativando NetworkManager
+      become: yes
       ansible.builtin.systemd_service:
         name: NetworkManager
         enabled: true
-        scope: user
 
     - name: Instalação terminator
       become: yes
