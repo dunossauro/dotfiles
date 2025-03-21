@@ -4,6 +4,9 @@
     - ansible.builtin.debug:
         msg: play1
 
+- name: aur
+  import_playbook: aur.yml
+
 - name: audio
   import_playbook: audio.yml
 
@@ -15,9 +18,6 @@
 
 - name: gui
   import_playbook: gui.yml
-
-- name: aur
-  import_playbook: aur.yml
 
 - name: work
   import_playbook: work.yml
