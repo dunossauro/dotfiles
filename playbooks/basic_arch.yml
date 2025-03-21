@@ -144,3 +144,9 @@
       become: yes
       shell: chsh -s /usr/bin/xonsh vagrant
       # TODO: Ajustar isso
+
+    - name: Configuração bpytop
+      become: yes
+      package:
+        name: bpytop
+        state: present
