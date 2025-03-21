@@ -1,5 +1,5 @@
 ---
-- name: Instalação inicial
+- name: Instalação inicial do sistema
   hosts: localhost
 
 
@@ -97,6 +97,36 @@
       ansible.builtin.systemd_service:
         enabled: true
         name: lightdm
+
+    - name: Instalação pipewire
+      become: yes
+      package:
+        name: pipewire
+        state: present
+
+    - name: Instalação pipewire-alsa
+      become: yes
+      package:
+        name: pipewire-alsa
+        state: present
+
+    - name: Instalação pipewire-pulse
+      become: yes
+      package:
+        name: pipewire-pulse
+        state: present
+
+    - name: Instalação pipewire-jack
+      become: yes
+      package:
+        name: pipewire-jack
+        state: present
+
+    - name: Instalação wireplumber
+      become: yes
+      package:
+        name: wireplumber
+        state: present
 
     - name: Instalação terminator
       become: yes

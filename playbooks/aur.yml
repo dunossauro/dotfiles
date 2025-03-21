@@ -9,6 +9,12 @@
         state: present
         use: makepkg
 
+    - name: Instalação pod2man
+      kewlfft.aur.aur:
+        use: paru
+        name: pod2man
+        state: present
+
     - name: Instalação obs
       kewlfft.aur.aur:
         use: paru
