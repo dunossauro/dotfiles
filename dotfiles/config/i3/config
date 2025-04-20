@@ -37,7 +37,7 @@ set $mod Mod4
 
 # default i3 tiling mode:
 workspace_layout default
-new_window pixel 1
+new_window pixel 0
 gaps inner 6
 gaps outer 3
 
@@ -186,3 +186,6 @@ bindsym mod1+Down exec playerctl play-pause
 bindsym mod1+Left exec playerctl previous
 bindsym mod1+Right exec playerctl next
 bindsym mod1+Up exec playerctl stop
+
+# Kdeconnect
+exec --no-startup-id /usr/lib/kdeconnectd

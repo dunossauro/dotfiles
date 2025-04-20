@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+from subprocess import check_output
+response = check_output('upower -i /org/freedesktop/UPower/devices/battery_hidpp_battery_0', shell=True).decode().split('\n')
+if '    present:             yes' in response:
+    print(response[13].split()[1])

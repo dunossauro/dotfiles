@@ -1,0 +1,5 @@
+#!/usr/bin/env python3
+from subprocess import check_output
+response = check_output('upower -i /org/freedesktop/UPower/devices/headphones_dev_C4_45_67_45_52_74', shell=True).decode().split('\n')
+if '  model:                ATH-SR50BT    ' in response:
+    print(response[9].split()[1])

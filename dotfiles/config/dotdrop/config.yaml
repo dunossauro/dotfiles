@@ -47,6 +47,9 @@ dotfiles:
   d_sessions:
     src: config/another-window-session-manager/sessions
     dst: ~/.config/another-window-session-manager/sessions
+  d_dotdrop:
+    src: config/dotdrop
+    dst: ~/.config/dotdrop
 profiles:
   melville:
     dotfiles:
@@ -63,3 +66,4 @@ profiles:
     - f_bashrc.python_env
     - d_terminator
     - d_sessions
+    - d_dotdrop
