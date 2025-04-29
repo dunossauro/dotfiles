@@ -8,6 +8,7 @@
     <outline text="#Programming - Łukasz Langa" title="#Programming - Łukasz Langa" description="" type="rss" version="RSS" htmlUrl="https://lukasz.langa.pl/programming/" xmlUrl="https://lukasz.langa.pl/programming/atom.xml"/>
     <outline text="&lt;/&gt; htmx - high power tools for html - Essays" title="&lt;/&gt; htmx - high power tools for html - Essays" description="" type="rss" version="RSS" htmlUrl="https://htmx.org/essays/" xmlUrl="https://htmx.org/essays/atom.xml"/>
     <outline text="a causa das causas" title="a causa das causas" description="" type="rss" version="RSS" htmlUrl="https://wuwei.bearblog.dev/" xmlUrl="https://wuwei.bearblog.dev/feed/"/>
+    <outline text="A Pelican Blog" title="A Pelican Blog" description="" type="rss" version="RSS" htmlUrl="https://thisiscleverson.github.io/" xmlUrl="https://thisiscleverson.github.io/feeds/all.atom.xml"/>
     <outline text="Ana Rodrigues" title="Ana Rodrigues" description="" type="rss" version="RSS" htmlUrl="https://ohhelloana.blog" xmlUrl="https://ohhelloana.blog/feed.xml"/>
     <outline text="Association for Computing Machinery: Keyword search for query" title="Association for Computing Machinery: Keyword search for query" description="" type="rss" version="RSS" htmlUrl="https://dl.acm.org/action/doSearch?type=advanced&amp;mi=16foxly&amp;af=R&amp;AllField=%22python%22+AND+%22typing%22&amp;content=standard&amp;target=default&amp;sortBy=recency" xmlUrl="https://dl.acm.org/action/showFeed?ui=0&amp;mi=16foxly&amp;type=search&amp;feed=rss&amp;query=%2526AllField%253D%252522python%252522%252BAND%252B%252522typing%252522%2526content%253Dstandard%2526target%253Ddefault%2526sortBy%253Drecency"/>
     <outline text="BaixaCultura" title="BaixaCultura" description="" type="rss" version="RSS" htmlUrl="https://baixacultura.org" xmlUrl="https://baixacultura.org/feed/"/>
@@ -24,6 +25,7 @@
     <outline text="Codeberg News" title="Codeberg News" description="" type="rss" version="RSS" htmlUrl="https://blog.codeberg.org/" xmlUrl="https://blog.codeberg.org/feeds/all.atom.xml"/>
     <outline text="core.py" title="core.py" description="" type="rss" version="RSS" htmlUrl="https://podcasters.spotify.com/pod/show/corepy" xmlUrl="https://anchor.fm/s/eb6edc3c/podcast/rss"/>
     <outline text="Dead Fish" title="Dead Fish" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCDXLfrS9dFh2yMkvjUEjpsQ" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCDXLfrS9dFh2yMkvjUEjpsQ"/>
+    <outline text="Deciphering Glyph" title="Deciphering Glyph" description="" type="rss" version="RSS" htmlUrl="https://blog.glyph.im/" xmlUrl="https://blog.glyph.im/feeds/all.atom.xml"/>
     <outline text="Descartes a Kant" title="Descartes a Kant" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCR4Jp1t2b6Os9YL1wm8cinA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCR4Jp1t2b6Os9YL1wm8cinA"/>
     <outline text="Ed Topzero" title="Ed Topzero" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCIfYJf1LbRo1ft3NM2AE34A" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCIfYJf1LbRo1ft3NM2AE34A"/>
     <outline text="Eduardo Mendes" title="Eduardo Mendes" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCAaKeg-BocRqphErdtIUFFw" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCAaKeg-BocRqphErdtIUFFw"/>
@@ -34,20 +36,26 @@
     <outline text="GIMP" title="GIMP" description="" type="rss" version="RSS" htmlUrl="https://www.gimp.org/" xmlUrl="https://www.gimp.org/feeds/atom.xml"/>
     <outline text="guites' thoughts page" title="guites' thoughts page" description="" type="rss" version="RSS" htmlUrl="https://guites.bearblog.dev/feed/?type=rss" xmlUrl="https://guites.bearblog.dev/feed/?type=rss"/>
     <outline text="Henrique Sebastião" title="Henrique Sebastião" description="" type="rss" version="RSS" htmlUrl="https://henriquesebastiao.com/" xmlUrl="https://henriquesebastiao.com/feed.xml"/>
+    <outline text="Home - helio.loureiro.eng.br" title="Home - helio.loureiro.eng.br" description="" type="rss" version="RSS" htmlUrl="https://helio.loureiro.eng.br/index.php" xmlUrl="https://helio.loureiro.eng.br/index.php?format=feed&amp;type=rss"/>
     <outline text="Home on Libre Arts" title="Home on Libre Arts" description="" type="rss" version="RSS" htmlUrl="https://librearts.org/" xmlUrl="https://librearts.org/index.xml"/>
     <outline text="Home Page on gmgall.net" title="Home Page on gmgall.net" description="" type="rss" version="RSS" htmlUrl="https://gmgall.net/" xmlUrl="https://www.gmgall.net/index.xml"/>
     <outline text="https://jlearn.site/index.xml" title="https://jlearn.site/index.xml" description="" type="rss" version="RSS" htmlUrl="https://jlearn.site/" xmlUrl="https://jlearn.site/index.xml"/>
     <outline text="Inédita Pamonha" title="Inédita Pamonha" description="" type="rss" version="RSS" htmlUrl="https://revistainspirec.com.br/news/" xmlUrl="https://revistainspirec.com.br/feed/podcast/?nocache"/>
     <outline text="Jair Naves" title="Jair Naves" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC-sI4e47rLzU6cdqHw5PQQg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC-sI4e47rLzU6cdqHw5PQQg"/>
     <outline text="Jason R. Coombs" title="Jason R. Coombs" description="" type="rss" version="RSS" htmlUrl="https://www.jaraco.com/" xmlUrl="https://blog.jaraco.com/feed.xml"/>
+    <outline text="jfcaiado.dev" title="jfcaiado.dev" description="" type="rss" version="RSS" htmlUrl="https://jfcaiado.dev/" xmlUrl="https://jfcaiado.dev/index.xml"/>
     <outline text="Jo's Blog" title="Jo's Blog" description="" type="rss" version="RSS" htmlUrl="https://dead.garden/blog/index.html" xmlUrl="https://dead.garden/blog/feed.rss"/>
+    <outline text="Joenio Marques da Costa" title="Joenio Marques da Costa" description="" type="rss" version="RSS" htmlUrl="http://joenio.me/" xmlUrl="https://joenio.me/feed.xml"/>
+    <outline text="Jonatas" title="Jonatas" description="" type="rss" version="RSS" htmlUrl="https://blog.jonatasoliveira.dev/" xmlUrl="https://blog.jonatasoliveira.dev/index.rss"/>
     <outline text="KDE Eco" title="KDE Eco" description="" type="rss" version="RSS" htmlUrl="https://eco.kde.org/" xmlUrl="https://eco.kde.org/index.xml"/>
     <outline text="Kdenlive" title="Kdenlive" description="" type="rss" version="RSS" htmlUrl="https://kdenlive.org/en/" xmlUrl="https://kdenlive.org/en/feed/"/>
+    <outline text="LOW←TECH MAGAZINE English" title="LOW←TECH MAGAZINE English" description="" type="rss" version="RSS" htmlUrl="https://solar.lowtechmagazine.com/posts/" xmlUrl="https://solar.lowtechmagazine.com/posts/index.xml"/>
     <outline text="Luciano Ratamero" title="Luciano Ratamero" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYBAN_yOwqKG6tlaPHvROqg"/>
     <outline text="luciano@ratamero.com - RSS Feed" title="luciano@ratamero.com - RSS Feed" description="" type="rss" version="RSS" htmlUrl="https://www.ratamero.com" xmlUrl="https://www.ratamero.com/feed.xml"/>
     <outline text="Ludoviajante" title="Ludoviajante" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCFzODWkN1gXm4ryOgLK8Deg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCFzODWkN1gXm4ryOgLK8Deg"/>
     <outline text="Luiz Yassuda" title="Luiz Yassuda" description="" type="rss" version="RSS" htmlUrl="https://luizyassuda.com" xmlUrl="https://luizyassuda.com/feed/"/>
     <outline text="Manual do Usuário" title="Manual do Usuário" description="" type="rss" version="RSS" htmlUrl="https://manualdousuario.net" xmlUrl="https://manualdousuario.net/feed/"/>
+    <outline text="Mas divago…" title="Mas divago…" description="" type="rss" version="RSS" htmlUrl="https://masdivago.cc" xmlUrl="https://masdivago.cc/feed/"/>
     <outline text="Meme de Carbono" title="Meme de Carbono" description="" type="rss" version="RSS" htmlUrl="https://www.memedecarbono.com.br" xmlUrl="https://www.memedecarbono.com.br/feed/"/>
     <outline text="Naomi Lago" title="Naomi Lago" description="" type="rss" version="RSS" htmlUrl="https://naomilago.com/" xmlUrl="https://naomilago.com/index.xml"/>
     <outline text="Naruhodo" title="Naruhodo" description="" type="rss" version="RSS" htmlUrl="http://naruhodo.b9.com.br" xmlUrl="https://feeds.simplecast.com/hwQVm5gy"/>
@@ -57,6 +65,7 @@
     <outline text="Não me entenda mal" title="Não me entenda mal" description="" type="rss" version="RSS" htmlUrl="https://sites.libsyn.com/556337" xmlUrl="https://feeds.libsyn.com/556337/rss"/>
     <outline text="O Alvissareiro" title="O Alvissareiro" description="" type="rss" version="RSS" htmlUrl="https://www.spreaker.com/podcast/o-alvissareiro--5920998" xmlUrl="https://www.spreaker.com/show/5920998/episodes/feed"/>
     <outline text="Open RSS" title="Open RSS" description="" type="rss" version="RSS" htmlUrl="https://openrss.org" xmlUrl="https://openrss.org/rss"/>
+    <outline text="osantana" title="osantana" description="" type="rss" version="RSS" htmlUrl="https://osantana.me" xmlUrl="https://osantana.me/feed/"/>
     <outline text="Poeira Jogos" title="Poeira Jogos" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCMTEVk6HFsuiVg9oIx7bntA" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCMTEVk6HFsuiVg9oIx7bntA"/>
     <outline text="PyCoder’s Weekly" title="PyCoder’s Weekly" description="" type="rss" version="RSS" htmlUrl="https://pycoders.com/" xmlUrl="https://pycoders.com/feed/Hkxm7K82"/>
     <outline text="Pyodide blog" title="Pyodide blog" description="" type="rss" version="RSS" htmlUrl="https://blog.pyodide.org/" xmlUrl="https://blog.pyodide.org/index.xml"/>
