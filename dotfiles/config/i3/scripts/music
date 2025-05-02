@@ -1,0 +1,12 @@
+#!/bin/bash
+
+artist=$(playerctl metadata -p youtubemusic,strawberry | grep artist)
+artist=${artist#*artist}
+artist=$(echo $artist | xargs)
+title=$(playerctl metadata -p youtubemusic,strawberry | grep title)
+title=${title#*title}
+title=$(echo $title | xargs)
+album=$(playerctl metadata -p youtubemusic,strawberry | grep album)
+album=${album#*album}
+album=$(echo $album | xargs)
+echo "🎵 $artist - $title ($album)"
