@@ -7,3 +7,4 @@ export THEME_SHOW_PYTHON=true
 export PIPEWIRE_LATENCY=128/48000
 export PYTHON_CONFIGURE_OPTS="--enable-shared"
 source "$BASH_IT"/bash_it.sh
+unset SUDO_ASKPASS

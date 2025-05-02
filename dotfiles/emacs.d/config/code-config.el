@@ -106,7 +106,7 @@
   :ensure t
   :custom (lsp-pyright-langserver-command "basedpyright")
   :hook
-  ((python-mode . (lambda ()
+  ((python-ts-mode . (lambda ()
                     (require 'lsp-pyright)
                     (lsp-deferred)))
    (flycheck-mode . (lambda ()
@@ -130,5 +130,17 @@
 
 (require 'lsp-diagnostics)
 (lsp-diagnostics-flycheck-enable)
+
+;; --- ts
+(use-package tree-sitter-langs
+  :ensure t)
+
+(use-package treesit-auto
+  :custom
+  (treesit-auto-install 'prompt)
+  :config
+  (treesit-auto-add-to-auto-mode-alist 'all)
+  (global-treesit-auto-mode))
+
 
 (provide 'code-config)

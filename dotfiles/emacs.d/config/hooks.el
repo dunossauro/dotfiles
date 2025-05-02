@@ -16,10 +16,13 @@
 (add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'hl-line-mode)
 
-(add-hook 'python-mode-hook
-     '(lambda () (define-key python-mode-map (kbd "C-c C-v") 'duplicate-line)))
-(add-hook 'python-mode-hook
-	  '(lambda () (define-key python-mode-map (kbd "C-/") 'comment-line)))
-(add-hook 'python-mode-hook '(lambda () (set (make-local-variable 'yas-indent-line) 'fixed)))
+;; ts-modes
+(defun my-ts-mode-keybindings ()
+  (when (string-suffix-p "-ts-mode" (symbol-name major-mode))
+    (local-set-key (kbd "C-c C-v") #'duplicate-line)
+    (local-set-key (kbd "C-/") #'comment-line)
+    (setq-local yas-indent-line 'fixed)))
+
+(add-hook 'after-change-major-mode-hook #'my-ts-mode-keybindings)
 
 (provide 'hooks)
