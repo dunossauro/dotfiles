@@ -13,7 +13,6 @@
       become: yes
       shell: pipx ensurepath
 
-
     - name: Instalação tk
       become: yes
       package:
@@ -42,7 +41,7 @@
 
     - name: Install ignr
       community.general.pipx:
-        name: harlequin
+        name: ignr
 
     - name: Install ipython
       community.general.pipx:
