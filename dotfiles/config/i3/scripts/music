@@ -1,12 +1,13 @@
 #!/bin/bash
 
-artist=$(playerctl metadata -p youtubemusic,strawberry | grep artist)
-artist=${artist#*artist}
-artist=$(echo $artist | xargs)
-title=$(playerctl metadata -p youtubemusic,strawberry | grep title)
-title=${title#*title}
-title=$(echo $title | xargs)
-album=$(playerctl metadata -p youtubemusic,strawberry | grep album)
-album=${album#*album}
-album=$(echo $album | xargs)
-echo "🎵 $artist - $title ($album)"
+artist=$(playerctl metadata artist -p youtubemusic,strawberry 2>&1)
+title=$(playerctl metadata title -p youtubemusic,strawberry 2>&1)
+album=$(playerctl metadata album -p youtubemusic,strawberry 2>&1)
+
+if [[ "$title" == *"No players found"* ]]; then
+    exit 0
+fi
+
+if [[ -n "$artist" && -n "$title" ]]; then
+    echo "🎵 $artist - $title (${album:-Sem Álbum})"
+fi
