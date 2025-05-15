@@ -56,6 +56,12 @@ dotfiles:
   f_power-profiles.rasi:
     src: config/rofi/power-profiles.rasi
     dst: ~/.config/rofi/power-profiles.rasi
+  f_arc_dark_colors.rasi:
+    src: config/rofi/arc_dark_colors.rasi
+    dst: ~/.config/rofi/arc_dark_colors.rasi
+  f_powermenu.rasi:
+    src: config/rofi/powermenu.rasi
+    dst: ~/.config/rofi/powermenu.rasi
 profiles:
   melville:
     dotfiles:
@@ -75,3 +81,5 @@ profiles:
     - d_dotdrop
     - f_arc_dark_transparent_colors.rasi
     - f_power-profiles.rasi
+    - f_arc_dark_colors.rasi
+    - f_powermenu.rasi
