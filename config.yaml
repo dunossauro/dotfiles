@@ -50,6 +50,12 @@ dotfiles:
   d_dotdrop:
     src: config/dotdrop
     dst: ~/.config/dotdrop
+  f_arc_dark_transparent_colors.rasi:
+    src: config/rofi/arc_dark_transparent_colors.rasi
+    dst: ~/.config/rofi/arc_dark_transparent_colors.rasi
+  f_power-profiles.rasi:
+    src: config/rofi/power-profiles.rasi
+    dst: ~/.config/rofi/power-profiles.rasi
 profiles:
   melville:
     dotfiles:
@@ -67,3 +73,5 @@ profiles:
     - d_terminator
     - d_sessions
     - d_dotdrop
+    - f_arc_dark_transparent_colors.rasi
+    - f_power-profiles.rasi
