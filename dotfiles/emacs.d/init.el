@@ -14,6 +14,7 @@
 (require 'keys)
 (require 'hooks)
 (require 'term-config)
+(require 'write-config)
 
 (use-package move-text
   :ensure t
