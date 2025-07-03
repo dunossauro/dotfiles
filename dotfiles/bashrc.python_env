@@ -10,15 +10,15 @@ export PYTHON_CONFIGURE_OPTS="--enable-shared"
 
 
 # Poetry bug
-#poetry() {
-#    if [[ $@ == "shell" ]]; then
-#        if ([[ -f "$(poetry env info -p)/bin/activate" ]] && [[ -z "${VIRTUAL_ENV:-}" ]]); then
-#            command source $(poetry env info -p)/bin/activate
-#        else
-#            command poetry "$@"
-#        fi
-#    else
-#        command poetry "$@"
-#    fi
-#}
+poetry() {
+    if [[ $@ == "shell" ]]; then
+        if ([[ -f "$(poetry env info -p)/bin/activate" ]] && [[ -z "${VIRTUAL_ENV:-}" ]]); then
+            command source $(poetry env info -p)/bin/activate
+        else
+            command poetry "$@"
+        fi
+    else
+        command poetry "$@"
+    fi
+}
 export PYTHON_KEYRING_BACKEND=keyring.backends.null.Keyring
