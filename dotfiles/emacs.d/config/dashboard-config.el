@@ -26,11 +26,10 @@
 	dashboard-startup-banner 'logo
 	dashboard-set-file-icons t
 	dashboard-icon-type 'all-the-icons
-	dashboard-heading-icons t
 	dashboard-projects-backend 'projectile
 	dashboard-set-init-info nil)
+
   :config
   (dashboard-setup-startup-hook))
-  (setq dashboard-org-agenda-categories '("Tasks"))
 
 (provide 'dashboard-config)

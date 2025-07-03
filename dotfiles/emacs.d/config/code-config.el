@@ -22,7 +22,6 @@
 
 ;; sardine
 (setq
- ;python-shell-interpreter "/home/dunossauro/.local/bin/sardine"
  python-shell-interpreter "/home/dunossauro/.local/bin/sardine"
  python-shell-interpreter-args "")
 
