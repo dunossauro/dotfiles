@@ -1,4 +1,5 @@
 [global_config]
+  ask_before_closing = never
 [keybindings]
   create_group = <Super>n
   group_all_toggle = <Alt><Super>g
