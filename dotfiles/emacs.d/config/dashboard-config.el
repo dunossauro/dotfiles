@@ -21,7 +21,8 @@
   :ensure t
   :init
   (setq dashboard-items '((recents . 5)
-			  (projects . 10))
+			  (projects . 5)
+			  (bookmarks . 5))
 	dashboard-banner-logo-title "Olar bb!"
 	dashboard-startup-banner 'logo
 	dashboard-set-file-icons t
@@ -31,5 +32,11 @@
 
   :config
   (dashboard-setup-startup-hook))
+
+; recentf
+(add-to-list 'recentf-exclude
+	     (recentf-expand-file-name "~/.elfeed/index"))
+(add-to-list 'recentf-exclude
+	     (recentf-expand-file-name "~/.emacs.d/bookmarks"))
 
 (provide 'dashboard-config)

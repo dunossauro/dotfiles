@@ -6,7 +6,6 @@
 (require 'gui-config)
 (require 'git-config)
 (require 'dashboard-config)
-(require 'markdown-config)
 (require 'html-config)
 (require 'code-config)
 (require 'languages)
@@ -15,6 +14,11 @@
 (require 'hooks)
 (require 'term-config)
 (require 'write-config)
+(require 'feed-config)
+
+(use-package marginalia
+  :ensure t
+  :init (marginalia-mode))
 
 (use-package move-text
   :ensure t

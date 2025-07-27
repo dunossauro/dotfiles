@@ -4,13 +4,11 @@
 
 (define-key origami-mode-map (kbd "<backtab>") 'origami-toggle-node)
 (define-key origami-mode-map (kbd "C-<iso-lefttab>") 'origami-toggle-all-nodes)
-(setopt display-fill-column-indicator-column 80)
 
 ; snippets from autocomplete
 (use-package yasnippet
-  :ensure t)
-
-(yas-global-mode 1)
+  :ensure t
+  :init (yas-global-mode 1))
 
 ; company: autocomplete library
 (use-package company

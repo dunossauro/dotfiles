@@ -1,8 +1,9 @@
 (require 'package)
 
 (setq package-enable-at-startup nil)
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.org/packages/"))
+(setq package-archives '(("elpa" . "http://elpa.gnu.org/packages/")
+			 ("melpa" . "http://melpa.org/packages/")
+			 ("org" . "https://orgmode.org/elpa/")))
 
 (package-initialize)
 

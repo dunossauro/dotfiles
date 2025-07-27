@@ -1,3 +1,26 @@
+; markdown config
+(use-package markdown-mode
+  :ensure t
+  :hook (markdown-mode . lsp)
+  :bind (:map markdown-mode-map
+         ("C-c C-e" . markdown-do))
+  :config
+  (require 'lsp-marksman)
+  (setq markdown-fontify-code-blocks-natively t))
+
+(custom-set-faces
+ '(markdown-header-face-1 ((t (:inherit markdown-header-face :height 1.8 :foreground "#A3BE8C" :weight extra-bold))))
+ '(markdown-header-face-2 ((t (:inherit markdown-header-face :height 1.4 :foreground "#EBCB8B" :weight extra-bold))))
+ '(markdown-header-face-3 ((t (:inherit markdown-header-face :height 1.2 :foreground "#D08770" :weight extra-bold))))
+ '(markdown-header-face-4 ((t (:inherit markdown-header-face :height 1.15 :foreground "#BF616A" :weight extra-bold))))
+ '(markdown-header-face-5 ((t (:inherit markdown-header-face :height 1.11 :foreground "#b48ead" :weight extra-bold))))
+ '(markdown-header-face-6 ((t (:inherit markdown-header-face :height 1.06 :foreground "#5e81ac" :weight extra-bold)))))
+
+; org config
+(use-package org
+  :ensure t)
+
+; citar config
 (use-package citar
   :ensure t
   :custom

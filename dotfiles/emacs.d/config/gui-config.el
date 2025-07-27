@@ -8,6 +8,9 @@
 (setq-default message-log-max nil)
 (kill-buffer "*Messages*")
 
+;; Show column indicator
+(setopt display-fill-column-indicator-column 80)
+
 ;; window size
 (add-to-list 'default-frame-alist '(height . 26))
 (add-to-list 'default-frame-alist '(width . 89))
@@ -69,6 +72,7 @@
 ;; Buffer tabs
 (global-unset-key (kbd "C-x <prior>"))
 (global-unset-key (kbd "C-x <next>"))
+
 (use-package centaur-tabs
   :ensure t
   :demand
