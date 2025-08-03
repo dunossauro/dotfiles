@@ -35,8 +35,8 @@
 
 ; recentf
 (add-to-list 'recentf-exclude
-	     (recentf-expand-file-name "~/.elfeed/index"))
+	     (recentf-expand-file-name "~/.elfeed/*"))
 (add-to-list 'recentf-exclude
-	     (recentf-expand-file-name "~/.emacs.d/bookmarks"))
+	     (recentf-expand-file-name "~/.emacs.d/*"))
 
 (provide 'dashboard-config)

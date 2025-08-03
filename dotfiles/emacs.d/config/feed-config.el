@@ -1,7 +1,7 @@
 (use-package elfeed
   :ensure t)
 
-(setq-default elfeed-search-filter "@1-week-ago ")
+(setq-default elfeed-search-filter "@1-week-ago +unread")
 (setq browse-url-browser-function 'eww-browse-url)
 
 (add-hook 'elfeed-new-entry-hook
