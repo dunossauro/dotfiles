@@ -53,7 +53,7 @@
     <outline text="Jonatas" title="Jonatas" description="" type="rss" version="RSS" htmlUrl="https://blog.jonatasoliveira.dev/" xmlUrl="https://blog.jonatasoliveira.dev/index.rss"/>
     <outline text="Jornal Acontece Botucatu" title="Jornal Acontece Botucatu" description="" type="rss" version="RSS" htmlUrl="https://acontecebotucatu.com.br/" xmlUrl="https://acontecebotucatu.com.br/feed/"/>
     <outline text="KDE Eco" title="KDE Eco" description="" type="rss" version="RSS" htmlUrl="https://eco.kde.org/" xmlUrl="https://eco.kde.org/index.xml"/>
-    <outline text="Kdenlive" title="Kdenlive" description="" type="rss" version="RSS" htmlUrl="https://kdenlive.org/en/" xmlUrl="https://kdenlive.org/en/feed/"/>
+    <outline text="Kdenlive" title="Kdenlive" description="" type="rss" version="RSS" htmlUrl="https://kdenlive.org/" xmlUrl="https://kdenlive.org/index.xml"/>
     <outline text="LOW←TECH MAGAZINE English" title="LOW←TECH MAGAZINE English" description="" type="rss" version="RSS" htmlUrl="https://solar.lowtechmagazine.com/posts/" xmlUrl="https://solar.lowtechmagazine.com/posts/index.xml"/>
     <outline text="Luciano Ratamero" title="Luciano Ratamero" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCYBAN_yOwqKG6tlaPHvROqg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCYBAN_yOwqKG6tlaPHvROqg"/>
     <outline text="luciano@ratamero.com - RSS Feed" title="luciano@ratamero.com - RSS Feed" description="" type="rss" version="RSS" htmlUrl="https://www.ratamero.com" xmlUrl="https://www.ratamero.com/feed.xml"/>
