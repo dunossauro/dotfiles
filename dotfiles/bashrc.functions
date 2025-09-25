@@ -14,3 +14,23 @@ python-upgrade(){
     pipx upgrade-all --include-injected
 }
 
+
+pycachec() {
+    local TARGET_DIR=~/git
+    local DIRS_TO_DELETE=(".venv" ".mypy_cache" ".ruff_cache" ".pytest_cache" "htmlcov")
+
+    echo "Buscando e deletando diretórios em $TARGET_DIR..."
+
+    # Construir o array de parâmetros do find para as condições -name
+    local FIND_ARGS=()
+    for dir in "${DIRS_TO_DELETE[@]}"; do
+        FIND_ARGS+=( -name "$dir" -o )
+    done
+    # Remover o último -o extra
+    unset 'FIND_ARGS[-1]'
+
+    find "$TARGET_DIR" -type d \( "${FIND_ARGS[@]}" \) | while read -r dir; do
+        echo "Deletando: $dir"
+        rm -rf "$dir"
+    done
+}
