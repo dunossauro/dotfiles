@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+case $BLOCK_BUTTON in
+  4) brightnessctl s +"$STEP_SIZE"% > /dev/null ;;
+  5) brightnessctl s "$STEP_SIZE"%- > /dev/null ;;
+esac
+
+
+BRIGHTNESS=$(brightnessctl -m | awk -F, '{print substr($4, 0, length($4)-1)}')
+echo $BRIGHTNESS
