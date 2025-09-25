@@ -1,0 +1,9 @@
+# -*- mode: snippet -*-
+# name: mermaid
+# key: /mermaid
+# --
+
+<div class="mermaid">
+flowchart ${1:LR}
+    ${2:Node1} --> ${3:Node2}
+</div>

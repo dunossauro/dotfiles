@@ -1,0 +1,8 @@
+# -*- mode: snippet -*-
+# name: scope
+# key: /scope
+# --
+
+<style scope>
+$0
+</style>

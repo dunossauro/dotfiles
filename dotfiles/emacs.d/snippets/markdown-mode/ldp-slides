@@ -1,0 +1,92 @@
+# -*- mode: snippet -*-
+# name: live-de-python
+# key: /ldp
+# --
+
+<!-- class: title -->
+
+<img src="/home/dunossauro/git/live-de-python/stuff/marp_slides/python-logo.png">
+
+# Live de Python # Número
+
+Título
+
+
+---
+
+<!-- class: summary -->
+
+<style scoped>
+  section.summary .lado-a p,
+  section.summary .lado-b p{
+    margin-bottom: 35%;
+  }
+</style>
+
+
+# Roteiro
+
+<div class="lados">
+<div class="lado-a">
+
+1. Tópico
+
+Resumo
+
+2. Tópico
+
+Resumo
+
+</div>
+
+<div class="lado-b">
+
+3. Tópico
+
+Resumo
+
+4. Tópico
+
+Resumo
+
+</div>
+
+---
+
+<!-- _class: help -->
+
+# Ajude o projeto
+
+  <figure>
+    <img src="https://github.com/dunossauro/live-de-python/blob/main/stuff/qr%20codes/apoiase.png?raw=true">
+    <figcaption>apoia.se/livedepython</figcaption>
+  </figure>
+  <figure>
+    <img src="https://github.com/dunossauro/live-de-python/blob/main/stuff/qr%20codes/pix.png?raw=true">
+    <figcaption>pix.dunossauro@gmail.com</figcaption>
+  </figure>
+  <figure>
+    <img src="https://github.com/dunossauro/live-de-python/blob/main/stuff/qr%20codes/patreon.png?raw=true">
+    <figcaption>patreon.com/dunossauro</figcaption>
+  </figure>
+
+---
+
+<!-- _class: apoia -->
+
+# Obrigado você <3
+
+
+---
+
+<!-- class: s-yellow -->
+
+
+<!-- Mermaid.js CDN -->
+<script type="module">
+import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+mermaid.initialize({
+  startOnLoad: true,
+  theme: 'forest'
+});
+</script>
