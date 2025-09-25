@@ -1,6 +1,8 @@
 (require 'package)
 
-;; Git extention
+(use-package with-editor
+  :ensure t)
+
 (use-package magit
   :ensure t)
 

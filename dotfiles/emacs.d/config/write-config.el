@@ -20,6 +20,8 @@
 (use-package org
   :ensure t)
 
+(setq org-agenda-files '("~/todos.org"))
+
 ; citar config
 (use-package citar
   :ensure t

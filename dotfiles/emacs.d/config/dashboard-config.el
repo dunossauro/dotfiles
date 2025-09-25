@@ -22,21 +22,27 @@
   :init
   (setq dashboard-items '((recents . 5)
 			  (projects . 5)
-			  (bookmarks . 5))
+			  (bookmarks . 5)
+			  (agenda . 5))
 	dashboard-banner-logo-title "Olar bb!"
 	dashboard-startup-banner 'logo
 	dashboard-set-file-icons t
 	dashboard-icon-type 'all-the-icons
 	dashboard-projects-backend 'projectile
-	dashboard-set-init-info nil)
+	dashboard-set-init-info nil
+	dashboard-center-content t)
 
   :config
-  (dashboard-setup-startup-hook))
+  (dashboard-setup-startup-hook)
+  (setq dashboard-item-names '(("Recent Files:"               . "Arquivos recentes:")
+			       ("Projects:"                   . "Projetos")
+                               ("Agenda for the coming week:" . "Agenda:"))))
 
 ; recentf
 (add-to-list 'recentf-exclude
 	     (recentf-expand-file-name "~/.elfeed/*"))
 (add-to-list 'recentf-exclude
 	     (recentf-expand-file-name "~/.emacs.d/*"))
+(add-to-list 'recentf-exclude "~/todos.org")
 
 (provide 'dashboard-config)
