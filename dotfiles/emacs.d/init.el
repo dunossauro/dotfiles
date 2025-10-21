@@ -16,6 +16,13 @@
 (require 'write-config)
 (require 'feed-config)
 
+; Pacotes que estou testando
+(use-package hl-todo
+  :ensure t
+  :config
+  (global-hl-todo-mode 1))
+; fim: Pacotes que estou testando
+
 (use-package marginalia
   :ensure t
   :init (marginalia-mode))

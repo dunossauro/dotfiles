@@ -64,24 +64,23 @@ keys = [
     # TODO: Key([alt], 'Up', lazy.spawn('playerctl stop'), desc="Pause music"),
 ]
 
-groups = [Group(i) for i in '123456789']
+groups = [Group(i) for i in '1234567890']
+
+def go_to_group(name: str):
+    def _inner(qtile):
+        if len(qtile.screens) == 1:
+            qtile.groups_map[name].toscreen()
+            return
+
+        if name in '123':
+            qtile.focus_screen(0)
+            qtile.groups_map[name].toscreen()
+        else:
+            qtile.focus_screen(1)
+            qtile.groups_map[name].toscreen()
+
+    return _inner
+
 
 for i in groups:
-    keys.extend(
-        [
-            Key(
-                [mod],
-                i.name,
-                lazy.group[i.name].toscreen(),
-                desc='Switch to group {}'.format(i.name),
-            ),
-            Key(
-                [mod, 'shift'],
-                i.name,
-                lazy.window.togroup(i.name, switch_group=True),
-                desc='Switch to & move focused window to group {}'.format(
-                    i.name
-                ),
-            ),
-        ]
-    )
+    keys.append(Key([mod], i.name, lazy.function(go_to_group(i.name))))
