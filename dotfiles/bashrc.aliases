@@ -19,8 +19,8 @@ alias nano='nano --linenumbers '
 alias carlan="carla -n ~/desktop/carla_bkp.carxp"
 alias carla="carla ~/desktop/carla_bkp.carxp"
 alias issues="gh issue list"
-alias lmarp="marp -w slides.md --theme ~/git/live-de-python/stuff/marp_slides/tema.css --alow-local-files --html"
-alias pdfmarp="marp slides.md --theme ~/git/live-de-python/stuff/marp_slides/tema.css --alow-local-files --html -o slides.pdf"
+alias lmarp="marp -w slides.md --theme ~/git/live-de-python/stuff/marp_slides/tema.css --allow-local-files --html"
+alias pdfmarp="marp slides.md --theme ~/git/live-de-python/stuff/marp_slides/tema.css --allow-local-files --html -o slides.pdf"
 
 pclear () {
    podman rmi $(podman images -qa) -f
