@@ -37,6 +37,7 @@
     <outline text="Flipo" title="Flipo" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UCprHvnB-8rntlHd6-8v9zmg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UCprHvnB-8rntlHd6-8v9zmg"/>
     <outline text="Foco Acessível" title="Foco Acessível" description="" type="rss" version="RSS" htmlUrl="http://focoacessivel.com.br" xmlUrl="https://anchor.fm/s/e14f7d9c/podcast/rss"/>
     <outline text="GIMP" title="GIMP" description="" type="rss" version="RSS" htmlUrl="https://www.gimp.org/" xmlUrl="https://www.gimp.org/feeds/atom.xml"/>
+    <outline text="Gui Commits" title="Gui Commits" description="" type="rss" version="RSS" htmlUrl="https://guicommits.com/" xmlUrl="https://guicommits.com/rss/"/>
     <outline text="guites' thoughts page" title="guites' thoughts page" description="" type="rss" version="RSS" htmlUrl="https://guites.bearblog.dev/feed/?type=rss" xmlUrl="https://guites.bearblog.dev/feed/?type=rss"/>
     <outline text="Henrique Sebastião" title="Henrique Sebastião" description="" type="rss" version="RSS" htmlUrl="https://henriquesebastiao.com/" xmlUrl="https://henriquesebastiao.com/feed.xml"/>
     <outline text="Home - helio.loureiro.eng.br" title="Home - helio.loureiro.eng.br" description="" type="rss" version="RSS" htmlUrl="https://helio.loureiro.eng.br/index.php" xmlUrl="https://helio.loureiro.eng.br/index.php?format=feed&amp;type=rss"/>
@@ -46,6 +47,7 @@
     <outline text="Hugo van Kemenade" title="Hugo van Kemenade" description="" type="rss" version="RSS" htmlUrl="https://hugovk.dev/" xmlUrl="https://hugovk.dev/index.xml"/>
     <outline text="Inédita Pamonha" title="Inédita Pamonha" description="" type="rss" version="RSS" htmlUrl="https://revistainspirec.com.br/news/" xmlUrl="https://revistainspirec.com.br/feed/podcast/?nocache"/>
     <outline text="Inkscape News feed" title="Inkscape News feed" description="" type="rss" version="RSS" htmlUrl="https://inkscape.org/news/" xmlUrl="https://inkscape.org/news/feed/"/>
+    <outline text="It's FOSS" title="It's FOSS" description="" type="rss" version="RSS" htmlUrl="https://itsfoss.com/" xmlUrl="https://itsfoss.com/rss/"/>
     <outline text="Jair Naves" title="Jair Naves" description="" type="rss" version="RSS" htmlUrl="https://www.youtube.com/channel/UC-sI4e47rLzU6cdqHw5PQQg" xmlUrl="https://www.youtube.com/feeds/videos.xml?channel_id=UC-sI4e47rLzU6cdqHw5PQQg"/>
     <outline text="Jason R. Coombs" title="Jason R. Coombs" description="" type="rss" version="RSS" htmlUrl="https://www.jaraco.com/" xmlUrl="https://blog.jaraco.com/feed.xml"/>
     <outline text="jfcaiado.dev" title="jfcaiado.dev" description="" type="rss" version="RSS" htmlUrl="https://jfcaiado.dev/" xmlUrl="https://jfcaiado.dev/index.xml"/>
@@ -90,6 +92,7 @@
     <outline text="Release notes from faker" title="Release notes from faker" description="" type="rss" version="RSS" htmlUrl="https://github.com/joke2k/faker/releases" xmlUrl="https://github.com/joke2k/faker/releases.atom"/>
     <outline text="Release notes from fastapi" title="Release notes from fastapi" description="" type="rss" version="RSS" htmlUrl="https://github.com/fastapi/fastapi/releases" xmlUrl="https://github.com/fastapi/fastapi/releases.atom"/>
     <outline text="Release notes from mkdocs-material" title="Release notes from mkdocs-material" description="" type="rss" version="RSS" htmlUrl="https://github.com/squidfunk/mkdocs-material/releases" xmlUrl="https://github.com/squidfunk/mkdocs-material/releases.atom"/>
+    <outline text="Release notes from mkdocs-quiz" title="Release notes from mkdocs-quiz" description="" type="rss" version="RSS" htmlUrl="https://github.com/ewels/mkdocs-quiz/releases" xmlUrl="https://github.com/ewels/mkdocs-quiz/releases.atom"/>
     <outline text="Release notes from moviepy" title="Release notes from moviepy" description="" type="rss" version="RSS" htmlUrl="https://github.com/Zulko/moviepy/releases" xmlUrl="https://github.com/Zulko/moviepy/releases.atom"/>
     <outline text="Release notes from pedalboard" title="Release notes from pedalboard" description="" type="rss" version="RSS" htmlUrl="https://github.com/spotify/pedalboard/releases" xmlUrl="https://github.com/spotify/pedalboard/releases.atom"/>
     <outline text="Release notes from poetry" title="Release notes from poetry" description="" type="rss" version="RSS" htmlUrl="https://github.com/python-poetry/poetry/releases" xmlUrl="https://github.com/python-poetry/poetry/releases.atom"/>
@@ -124,5 +127,6 @@
     <outline text="We Distribute" title="We Distribute" description="" type="rss" version="RSS" htmlUrl="https://wedistribute.org/" xmlUrl="https://wedistribute.org/feed/"/>
     <outline text="Will McGugan" title="Will McGugan" description="" type="rss" version="RSS" htmlUrl="http://willmcgugan.github.io/" xmlUrl="https://willmcgugan.github.io/feed.xml"/>
     <outline text="William Oliveira’s Blog" title="William Oliveira’s Blog" description="" type="rss" version="RSS" htmlUrl="https://woliveiras.com.br" xmlUrl="https://woliveiras.com.br/rss.xml"/>
+    <outline text="Zotero" title="Zotero" description="" type="rss" version="RSS" htmlUrl="https://www.zotero.org/blog" xmlUrl="http://feeds.feedburner.com/zotero/"/>
   </body>
 </opml>
