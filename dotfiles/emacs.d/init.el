@@ -7,7 +7,7 @@
 (require 'git-config)
 (require 'dashboard-config)
 (require 'html-config)
-(require 'lspc)
+(require 'lsp-config)
 (require 'code-config)
 (require 'languages)
 (require 'functions)
