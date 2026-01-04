@@ -1,11 +1,9 @@
 ; markdown config
 (use-package markdown-mode
   :ensure t
-  :hook (markdown-mode . lsp)
   :bind (:map markdown-mode-map
          ("C-c C-e" . markdown-do))
   :config
-  (require 'lsp-marksman)
   (setq markdown-fontify-code-blocks-natively t))
 
 (custom-set-faces

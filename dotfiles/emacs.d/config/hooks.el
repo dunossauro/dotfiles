@@ -13,7 +13,6 @@
 
 (add-hook 'text-mode-hook 'display-line-numbers-mode)
 ; install hunspell-pt-br on aur
-(add-hook 'text-mode-hook 'flyspell-mode)
 (add-hook 'text-mode-hook 'hl-line-mode)
 
 ;; ts-modes

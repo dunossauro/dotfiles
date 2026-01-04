@@ -1,7 +1,3 @@
-(use-package which-key
-  :ensure t
-  :config (which-key-mode))
-
 (global-unset-key (kbd "C-/"))
 (global-unset-key (kbd "C-_"))
 (global-unset-key (kbd "M-a"))
@@ -9,6 +5,18 @@
 (global-unset-key (kbd "C-y"))
 (global-unset-key (kbd "C-<up>"))
 (global-unset-key (kbd "C-<down>"))
+
+
+(use-package which-key
+  :ensure t
+  :config (which-key-mode))
+
+(use-package move-text
+  :ensure t
+  :config
+  (progn
+    (global-set-key (kbd "C-<up>") 'move-text-up)
+    (global-set-key (kbd "C-<down>") 'move-text-down)))
 
 (global-set-key (kbd "C-<dead-grave>") 'vterm-toggle)
 (global-set-key (kbd "C-`") 'vterm-toggle)

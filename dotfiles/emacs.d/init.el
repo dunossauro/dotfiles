@@ -7,6 +7,7 @@
 (require 'git-config)
 (require 'dashboard-config)
 (require 'html-config)
+(require 'lspc)
 (require 'code-config)
 (require 'languages)
 (require 'functions)
@@ -17,6 +18,12 @@
 (require 'feed-config)
 
 ; Pacotes que estou testando
+(use-package exec-path-from-shell
+  :ensure t
+  :config
+  (when (memq window-system '(mac ns x))
+    (exec-path-from-shell-initialize)))
+
 (use-package hl-todo
   :ensure t
   :config
@@ -26,13 +33,6 @@
 (use-package marginalia
   :ensure t
   :init (marginalia-mode))
-
-(use-package move-text
-  :ensure t
-  :config
-  (progn
-    (global-set-key (kbd "C-<up>") 'move-text-up)
-    (global-set-key (kbd "C-<down>") 'move-text-down)))
 
 ;; Ivy
 (use-package swiper
