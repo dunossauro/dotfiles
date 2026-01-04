@@ -42,4 +42,4 @@ if [ -e ~/.bashrc.project ] ; then
    source ~/.bashrc.project
 fi
 
-export PATH="$PATH:/home/dunossauro/.local/bin"
+export PATH="$PATH:/home/dunossauro/.local/bin:/home/dunossauro/.emacs.d/mason/bin"
