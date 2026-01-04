@@ -62,6 +62,9 @@ dotfiles:
   f_powermenu.rasi:
     src: config/rofi/powermenu.rasi
     dst: ~/.config/rofi/powermenu.rasi
+  d_rassumfrassum:
+    src: config/rassumfrassum
+    dst: ~/.config/rassumfrassum
 profiles:
   melville:
     dotfiles:
@@ -83,3 +86,4 @@ profiles:
     - f_power-profiles.rasi
     - f_arc_dark_colors.rasi
     - f_powermenu.rasi
+    - d_rassumfrassum
