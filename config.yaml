@@ -7,7 +7,6 @@ config:
   link_dotfile_default: nolink
   link_on_import: nolink
   longkey: false
-
 dotfiles:
   d_config:
     src: emacs.d/config
@@ -73,6 +72,22 @@ dotfiles:
     cmpignore:
     - '*/__pycache__/*'
 
+  f_xprofile:
+    src: xprofile
+    dst: ~/.xprofile
+    chmod: '755'
+  f_qt5ct.conf:
+    src: config/qt5ct/qt5ct.conf
+    dst: ~/.config/qt5ct/qt5ct.conf
+  f_qt6ct.conf:
+    src: config/qt6ct/qt6ct.conf
+    dst: ~/.config/qt6ct/qt6ct.conf
+  f_catppuccin-mocha-mauve.conf:
+    src: config/qt6ct/colors/catppuccin-mocha-mauve.conf
+    dst: ~/.config/qt6ct/colors/catppuccin-mocha-mauve.conf
+  f_colors_catppuccin-mocha-mauve.conf:
+    src: config/qt5ct/colors/catppuccin-mocha-mauve.conf
+    dst: ~/.config/qt5ct/colors/catppuccin-mocha-mauve.conf
 profiles:
   melville:
     dotfiles:
@@ -95,3 +110,8 @@ profiles:
     - f_arc_dark_colors.rasi
     - f_powermenu.rasi
     - d_rassumfrassum
+    - f_xprofile
+    - f_qt5ct.conf
+    - f_qt6ct.conf
+    - f_catppuccin-mocha-mauve.conf
+    - f_colors_catppuccin-mocha-mauve.conf
