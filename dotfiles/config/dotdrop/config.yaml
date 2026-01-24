@@ -50,6 +50,22 @@ dotfiles:
   d_dotdrop:
     src: config/dotdrop
     dst: ~/.config/dotdrop
+  f_catppuccin-mocha-mauve.conf:
+    src: config/qt5ct/colors/catppuccin-mocha-mauve.conf
+    dst: ~/.config/qt5ct/colors/catppuccin-mocha-mauve.conf
+  f_colors_catppuccin-mocha-mauve.conf:
+    src: config/qt6ct/colors/catppuccin-mocha-mauve.conf
+    dst: ~/.config/qt6ct/colors/catppuccin-mocha-mauve.conf
+  f_qt6ct.conf:
+    src: config/qt6ct/qt6ct.conf
+    dst: ~/.config/qt6ct/qt6ct.conf
+  f_qt5ct.conf:
+    src: config/qt5ct/qt5ct.conf
+    dst: ~/.config/qt5ct/qt5ct.conf
+  f_xprofile:
+    src: xprofile
+    dst: ~/.xprofile
+    chmod: '755'
 profiles:
   melville:
     dotfiles:
@@ -67,3 +83,8 @@ profiles:
     - d_terminator
     - d_sessions
     - d_dotdrop
+    - f_catppuccin-mocha-mauve.conf
+    - f_colors_catppuccin-mocha-mauve.conf
+    - f_qt6ct.conf
+    - f_qt5ct.conf
+    - f_xprofile

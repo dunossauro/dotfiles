@@ -4,4 +4,10 @@
 (define-key global-map "\C-ca" 'org-agenda)
 (setq org-log-done t)
 
+;; cucumber
+(use-package feature-mode
+  :ensure t
+  :custom
+  (feature-default-language "pt"))
+
 (provide 'languages)
