@@ -53,13 +53,6 @@
   (setq catppuccin-flavor 'mocha)
   (catppuccin-reload))
 
-(use-package spaceline
-  :ensure t)
-
-(use-package spaceline-config
-  :config
-  (spaceline-emacs-theme))
-
 ;; Side tree
 (use-package neotree
   :ensure t
@@ -96,5 +89,9 @@
 (use-package emojify
   :ensure t
   :hook (after-init . global-emojify-mode))
+
+(use-package doom-modeline
+  :ensure t
+  :init (doom-modeline-mode 1))
 
 (provide 'gui-config)
