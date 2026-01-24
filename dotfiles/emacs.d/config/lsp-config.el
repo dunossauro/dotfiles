@@ -29,30 +29,10 @@
       :disabledRules (:pt-BR ["PT_SMART_QUOTES" "ELLIPSIS"])
       :completionEnabled t))))
 
-(use-package
- flycheck
- :ensure t
- :diminish flycheck-mode
- :init
- (setq
-  flycheck-check-syntax-automatically '(save new-line)
-  flycheck-idle-change-delay 5.0
-  flycheck-display-errors-delay 0.9
-  flycheck-highlighting-mode 'symbols
-  flycheck-indication-mode 'left-fringe
-  flycheck-standard-error-navigation t
-  flycheck-deferred-syntax-check nil)
-)
-
-(use-package flycheck-eglot
+(use-package flymake-diagnostic-at-point
   :ensure t
-  :after (flycheck eglot)
+  :after flymake
   :config
-  (global-flycheck-eglot-mode 1))
-
-(use-package flycheck-inline :ensure t)
-
-(with-eval-after-load 'flycheck
-  (add-hook 'flycheck-mode-hook #'flycheck-inline-mode))
+  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
 
 (provide 'lsp-config)
