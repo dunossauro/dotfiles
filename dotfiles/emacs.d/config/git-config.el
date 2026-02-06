@@ -10,5 +10,4 @@
 (use-package diff-hl
   :ensure t)
 
-
 (provide 'git-config)

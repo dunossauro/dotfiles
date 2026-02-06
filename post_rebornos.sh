@@ -29,7 +29,7 @@ paru -S brave-bin firefox firefox-i18n-pt-br firefox-developer-edition firefox-d
 # Audio
 paru -S ardour calf yoshimi helvum carla vital-synth
 
-## Audio brigdes
+## Audio bridges
 paru -S carla-bridges-win32 carla-bridges-win64 wine
 
 # Pipewire

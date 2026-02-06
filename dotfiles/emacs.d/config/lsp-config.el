@@ -4,13 +4,12 @@
   (mason-setup))
 
 (mason-setup
-  (dolist (pkg '("zuban" "ruff" "marksman" "ltex-ls-plus" "typos-lsp"))
+  (dolist (pkg '("zuban" "ruff" "marksman" "ltex-ls-plus" "typos-lsp" "clangd" "bash-language-server"))
     (unless (mason-installed-p pkg)
       (ignore-errors (mason-install pkg)))))
 
 (defconst my/typos-modes
-  '(bash-mode bash-ts-mode
-    yaml-mode yaml-ts-mode
+  '(yaml-mode yaml-ts-mode
     dockerfile-mode dockerfile-ts-mode
     json-mode json-ts-mode
     toml-mode toml-ts-mode
@@ -21,6 +20,8 @@
   :defer t
   :hook ((python-ts-mode . eglot-ensure)
 	 (markdown-mode . eglot-ensure)
+	 (c-ts-mode . eglot-ensure)
+	 (bash-ts-mode . eglot-ensure)
          (python-ts-mode . (lambda () (set-fill-column 79))))
 
   :config
@@ -28,6 +29,10 @@
                '((python-mode python-ts-mode) . ("rass" "python")))
   (add-to-list 'eglot-server-programs
                '((markdown-mode) . ("rass" "markdown")))
+  (add-to-list 'eglot-server-programs
+               '((c-mode c-ts-mode) . ("rass" "clang")))
+  (add-to-list 'eglot-server-programs
+               '((sh-mode bash-ts-mode) . ("rass" "bash")))
 
   ; only typos
   (add-to-list 'eglot-server-programs

@@ -1,6 +1,6 @@
 def servers():
     return [
         ['marksman'],
-	['ltex-ls-plus']
+        ['ltex-ls-plus']
     ]
 
