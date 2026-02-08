@@ -14,9 +14,19 @@
     foreground_color = "#cdd6f4"
     show_titlebar = False
     scrollbar_position = hidden
+    scrollback_infinite = True
     palette = "#282828:#cc241d:#98971a:#d79921:#458588:#b16286:#689d6a:#a89984:#928374:#fb4934:#b8bb26:#fabd2f:#83a598:#d3869b:#8ec07c:#ebdbb2"
     use_system_font = False
-  [[teste]]
+  [[Invertion]]
+    background_color = "#fdf6e3"
+    cursor_fg_color = "#1e1e2e"
+    cursor_bg_color = "#cdd6f4"
+    cursor_color_default = False
+    font = Source Code Pro 36
+    foreground_color = "#657b83"
+    show_titlebar = False
+    scrollback_infinite = True
+    use_system_font = False
 [layouts]
   [[default]]
     [[[window0]]]
