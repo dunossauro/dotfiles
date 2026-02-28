@@ -88,6 +88,9 @@ dotfiles:
   f_colors_catppuccin-mocha-mauve.conf:
     src: config/qt5ct/colors/catppuccin-mocha-mauve.conf
     dst: ~/.config/qt5ct/colors/catppuccin-mocha-mauve.conf
+  f_early-init.el:
+    src: emacs.d/early-init.el
+    dst: ~/.emacs.d/early-init.el
 profiles:
   melville:
     dotfiles:
@@ -115,3 +118,4 @@ profiles:
     - f_qt6ct.conf
     - f_catppuccin-mocha-mauve.conf
     - f_colors_catppuccin-mocha-mauve.conf
+    - f_early-init.el
