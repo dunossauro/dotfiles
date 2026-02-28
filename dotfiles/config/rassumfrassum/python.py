@@ -3,6 +3,4 @@ def servers():
         ['zuban', 'server'],
         ['ruff', 'server'],
         ['typos-lsp'],
-        # pipx install pytest-language-server - not in mason
-        ['pytest-language-server'],
     ]
