@@ -15,11 +15,6 @@
   (completion-category-overrides
    '((file (styles partial-completion)))))
 
-(use-package marginalia
-  :ensure t
-  :init
-  (marginalia-mode))
-
 (use-package consult
   :ensure t
   :bind
@@ -39,5 +34,4 @@
   :config
   (vertico-prescient-mode 1))
 
-
-(provide 'completition-config)
+(provide 'completion-config)
