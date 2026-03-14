@@ -80,4 +80,9 @@
  (global-treesit-auto-mode))
 
 
+(use-package hl-todo
+  :ensure t
+  :config
+  (global-hl-todo-mode 1))
+
 (provide 'code-config)
