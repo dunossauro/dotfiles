@@ -10,13 +10,6 @@
 	projectile-indexing-method 'alien
 	projectile-use-git-grep 1))
 
-(projectile-register-project-type 'python-toml '("pyproject.toml")
-                                  :project-file "pyproject.toml"
-                                  :compile "poetry build"
-                                  :test "task test"
-                                  :test-prefix "test_"
-                                  :test-suffix "_test")
-
 (use-package dashboard
   :ensure t
   :init
