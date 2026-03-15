@@ -33,8 +33,6 @@
 (global-set-key (kbd "C-k") (lambda () (interactive) (kill-buffer (current-buffer))))
 (global-set-key (kbd "C-c C-v") 'duplicate-line)
 (global-set-key (kbd "C-x C-t") 'projectile-run-vterm)
-(global-set-key (kbd "C-S-f") 'projectile-grep)
-(global-set-key (kbd "C-e") 'flycheck-list-errors)
 
 (global-set-key (kbd "C-+")
                 (lambda ()

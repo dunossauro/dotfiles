@@ -19,9 +19,10 @@
   :ensure t
   :bind
   (("C-f" . consult-line)
-   ("C-x b" . consult-buffer)
-   ("M-y" . consult-yank-pop)
-   ("C-c g" . consult-ripgrep)))
+   ("C-S-f" . consult-git-grep)
+   ("C-S-M-f" . consult-grep)
+   ("C-e"  . 'consult-flymake)
+   ("C-x b" . consult-buffer)))
 
 (use-package prescient
   :ensure t
