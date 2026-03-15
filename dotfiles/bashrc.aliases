@@ -14,6 +14,7 @@ alias ls=exa
 alias lla='exa -al'
 alias lt='exa --tree'
 alias .='echo $PWD'
+alias xclip="xclip -sel clip"
 alias pshell='source $(poetry env info -p)/bin/activate'
 alias nano='nano --linenumbers '
 alias carlan="carla -n ~/desktop/carla_bkp.carxp"
