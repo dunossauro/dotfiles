@@ -46,7 +46,13 @@
       :additionalRules (:enablePickyRules t
 			:motherTongue "pt-BR")
       :disabledRules (:pt-BR ["PT_SMART_QUOTES" "ELLIPSIS"])
-      :completionEnabled t))))
+      :completionEnabled t)))
+
+  :bind (:map eglot-mode-map
+	      ("C-c e a" . eglot-code-actions)
+	      ("C-c e r" . eglot-rename)
+	      ("C-c e f" . eglot-format)))
+
 
 ; add 'typos-modes' in eglot-ensure
 (dolist (mode my/typos-modes)
