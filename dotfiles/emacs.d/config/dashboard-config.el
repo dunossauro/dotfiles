@@ -15,8 +15,7 @@
   :init
   (setq dashboard-items '((recents . 5)
 			  (projects . 5)
-			  (bookmarks . 5)
-			  (agenda . 5))
+			  (bookmarks . 5))
 	dashboard-banner-logo-title "Olar bb!"
 	dashboard-startup-banner 'logo
 	dashboard-set-file-icons t
@@ -28,8 +27,7 @@
   :config
   (dashboard-setup-startup-hook)
   (setq dashboard-item-names '(("Recent Files:"               . "Arquivos recentes:")
-			       ("Projects:"                   . "Projetos")
-                               ("Agenda for the coming week:" . "Agenda:"))))
+			       ("Projects:"                   . "Projetos"))))
 
 ; recentf
 (add-to-list 'recentf-exclude
