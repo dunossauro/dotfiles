@@ -1,7 +1,6 @@
 (global-unset-key (kbd "C-/"))
 (global-unset-key (kbd "C-_"))
 (global-unset-key (kbd "M-a"))
-(global-unset-key (kbd "C-e"))
 (global-unset-key (kbd "C-y"))
 (global-unset-key (kbd "C-<up>"))
 (global-unset-key (kbd "C-<down>"))
