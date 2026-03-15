@@ -21,7 +21,7 @@
   (("C-f" . consult-line)
    ("C-S-f" . consult-git-grep)
    ("C-S-M-f" . consult-grep)
-   ("C-e"  . 'consult-flymake)
+   ("C-e"  . consult-flymake)
    ("C-x b" . consult-buffer)))
 
 (use-package prescient
