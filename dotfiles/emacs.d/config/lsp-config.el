@@ -4,7 +4,7 @@
   (mason-setup))
 
 (mason-setup
-  (dolist (pkg '("zuban" "ruff" "marksman" "ltex-ls-plus" "typos-lsp" "clangd" "bash-language-server"))
+  (dolist (pkg '("zuban" "ruff" "marksman" "ltex-ls-plus" "typos-lsp" "clangd" "bash-language-server" "tofu-ls"))
     (unless (mason-installed-p pkg)
       (ignore-errors (mason-install pkg)))))
 
@@ -22,6 +22,7 @@
 	 (markdown-mode . eglot-ensure)
 	 (c-ts-mode . eglot-ensure)
 	 (bash-ts-mode . eglot-ensure)
+	 (terraform-mode . eglot-ensure)
          (python-ts-mode . (lambda () (set-fill-column 79))))
 
   :config
@@ -33,6 +34,8 @@
                '((c-mode c-ts-mode) . ("rass" "clang")))
   (add-to-list 'eglot-server-programs
                '((sh-mode bash-ts-mode) . ("rass" "bash")))
+  (add-to-list 'eglot-server-programs
+               '((terraform-mode) . ("tofu-ls" "serve")))
 
   ; only typos
   (add-to-list 'eglot-server-programs

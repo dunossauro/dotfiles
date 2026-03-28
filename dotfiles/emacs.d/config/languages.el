@@ -10,4 +10,7 @@
   :custom
   (feature-default-language "pt"))
 
+(use-package terraform-mode
+  :ensure t)
+
 (provide 'languages)
