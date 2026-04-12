@@ -13,4 +13,8 @@
 (use-package terraform-mode
   :ensure t)
 
+;; python
+(use-package python-coverage
+  :ensure t
+
 (provide 'languages)
