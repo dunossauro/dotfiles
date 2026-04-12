@@ -15,6 +15,6 @@
 
 ;; python
 (use-package python-coverage
-  :ensure t
+  :ensure t)
 
 (provide 'languages)
