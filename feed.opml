@@ -11,7 +11,6 @@
     <outline text="a causa das causas" title="a causa das causas" description="" type="rss" version="RSS" htmlUrl="https://wuwei.bearblog.dev/" xmlUrl="https://wuwei.bearblog.dev/feed/"/>
     <outline text="Ana Rodrigues" title="Ana Rodrigues" description="" type="rss" version="RSS" htmlUrl="https://ohhelloana.blog" xmlUrl="https://ohhelloana.blog/feed.xml"/>
     <outline text="Andrew Kelley" title="Andrew Kelley" description="" type="rss" version="RSS" htmlUrl="https://andrewkelley.me/" xmlUrl="https://andrewkelley.me/rss.xml"/>
-    <outline text="Apyb" title="Apyb" description="" type="rss" version="RSS" htmlUrl="https://github.com/apyb/comunidade/discussions" xmlUrl="https://openrss.org/https://github.com/apyb/comunidade/discussions"/>
     <outline text="Associação Python Brasil" title="Associação Python Brasil" description="" type="rss" version="RSS" htmlUrl="" xmlUrl="https://blog.python.org.br/index.rss"/>
     <outline text="Azvdo Blog" title="Azvdo Blog" description="" type="rss" version="RSS" htmlUrl="https://azvdo.net/" xmlUrl="https://azvdo.net/feed.xml"/>
     <outline text="BaixaCultura" title="BaixaCultura" description="" type="rss" version="RSS" htmlUrl="https://baixacultura.org" xmlUrl="https://baixacultura.org/feed/"/>
@@ -73,8 +72,6 @@
     <outline text="Mastering Emacs" title="Mastering Emacs" description="" type="rss" version="RSS" htmlUrl="https://www.masteringemacs.org/feed" xmlUrl="https://www.masteringemacs.org/feed"/>
     <outline text="Meme de Carbono" title="Meme de Carbono" description="" type="rss" version="RSS" htmlUrl="https://www.memedecarbono.com.br" xmlUrl="https://www.memedecarbono.com.br/feed/"/>
     <outline text="Não me entenda mal" title="Não me entenda mal" description="" type="rss" version="RSS" htmlUrl="https://sites.libsyn.com/556337" xmlUrl="https://feeds.libsyn.com/556337/rss"/>
-    <outline text="Naomi Lago" title="Naomi Lago" description="" type="rss" version="RSS" htmlUrl="https://naomilago.com/" xmlUrl="https://naomilago.com/index.xml"/>
-    <outline text="Naruhodo" title="Naruhodo" description="" type="rss" version="RSS" htmlUrl="http://naruhodo.b9.com.br" xmlUrl="https://feeds.simplecast.com/hwQVm5gy"/>
     <outline text="Naruhodo! • B9" title="Naruhodo! • B9" description="" type="rss" version="RSS" htmlUrl="https://www.b9.com.br/shows/naruhodo/" xmlUrl="https://www.b9.com.br/shows/naruhodo/feed/"/>
     <outline text="Newest Python PEPs" title="Newest Python PEPs" description="" type="rss" version="RSS" htmlUrl="https://peps.python.org/" xmlUrl="https://peps.python.org/peps.rss/"/>
     <outline text="O Alvissareiro" title="O Alvissareiro" description="" type="rss" version="RSS" htmlUrl="https://www.spreaker.com/podcast/o-alvissareiro--5920998" xmlUrl="https://www.spreaker.com/show/5920998/episodes/feed"/>
