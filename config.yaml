@@ -91,6 +91,9 @@ dotfiles:
   f_early-init.el:
     src: emacs.d/early-init.el
     dst: ~/.emacs.d/early-init.el
+  d_dunst:
+    src: config/dunst
+    dst: ~/.config/dunst
 profiles:
   melville:
     dotfiles:
@@ -119,3 +122,4 @@ profiles:
     - f_catppuccin-mocha-mauve.conf
     - f_colors_catppuccin-mocha-mauve.conf
     - f_early-init.el
+    - d_dunst
