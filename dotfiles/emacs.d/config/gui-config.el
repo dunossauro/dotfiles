@@ -46,12 +46,10 @@
 (use-package all-the-icons
   :ensure t)
 
-(use-package catppuccin-theme
+(use-package batppuccin
   :ensure t
   :config
-  (load-theme #'catppuccin t)
-  (setq catppuccin-flavor 'mocha)
-  (catppuccin-reload))
+  (load-theme 'batppuccin-mocha t))
 
 ;; Side tree
 (use-package neotree
