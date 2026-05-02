@@ -1,0 +1,7 @@
+# -*- mode: snippet -*-
+# name: poetry-package
+# key: /poetry-package
+# --
+
+[tool.poetry]
+package-mode = ${1:false}

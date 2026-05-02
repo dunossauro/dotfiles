@@ -1,0 +1,13 @@
+# -*- mode: snippet -*-
+# name: coverage
+# key: /coverage
+# --
+
+
+[tool.coverage.run]
+branch = true
+parallel = ${1:true}
+dynamic_context = "test_function"
+
+[tool.coverage.html]
+show_contexts = true

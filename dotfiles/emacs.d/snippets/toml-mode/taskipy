@@ -1,0 +1,10 @@
+# -*- mode: snippet -*-
+# name: taskipy
+# key: /taskipy
+# --
+
+
+[tool.taskipy.tasks]
+lint = {cmd="$1", help="$2"}
+test = {cmd="$3", help="$4"}
+pos_test = {cmd="$5", help="$6"}

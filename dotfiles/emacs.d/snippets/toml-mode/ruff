@@ -1,0 +1,16 @@
+# -*- mode: snippet -*-
+# name: ruff
+# key: /ruff
+# --
+
+[tool.ruff]
+line-length = 79
+
+[tool.ruff.lint]
+preview = true
+select = ['I', 'F', 'E', 'W', 'PL', 'PT', 'FURB', 'TRY']
+ignore = ['E402', 'F811']
+
+[tool.ruff.format]
+preview = true
+quote-style = 'single'
