@@ -18,3 +18,11 @@
 (require 'term-config)
 (require 'write-config)
 (require 'feed-config)
+
+(use-package
+ elisp-autofmt
+ :ensure t
+ :init (setq elisp-autofmt-check-elisp-autofmt-exists 'always)
+ :commands (elisp-autofmt-mode elisp-autofmt-buffer)
+ :hook (emacs-lisp-mode . elisp-autofmt-mode)
+ :config (setq elisp-autofmt-on-save-p t))

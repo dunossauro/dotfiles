@@ -5,16 +5,14 @@
 (setq org-log-done t)
 
 ;; cucumber
-(use-package feature-mode
-  :ensure t
-  :custom
-  (feature-default-language "pt"))
+(use-package
+ feature-mode
+ :ensure t
+ :custom (feature-default-language "pt"))
 
-(use-package terraform-mode
-  :ensure t)
+(use-package terraform-mode :ensure t)
 
 ;; python
-(use-package python-coverage
-  :ensure t)
+(use-package python-coverage :ensure t)
 
 (provide 'languages)

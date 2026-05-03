@@ -12,7 +12,10 @@
 (defun duplicate-line (arg)
   (interactive "*p")
   (setq buffer-undo-list (cons (point) buffer-undo-list))
-  (let ((bol (save-excursion (beginning-of-line) (point)))
+  (let ((bol
+         (save-excursion
+           (beginning-of-line)
+           (point)))
         eol)
     (save-excursion
       (end-of-line)
@@ -23,11 +26,10 @@
         (while (> count 0)
           (newline)
           (insert line)
-          (setq count (1- count)))
-        )
+          (setq count (1- count))))
 
-      (setq buffer-undo-list (cons (cons eol (point)) buffer-undo-list)))
-    )
+      (setq buffer-undo-list
+            (cons (cons eol (point)) buffer-undo-list))))
   (next-line arg))
 
 (defun new-empty-buffer ()

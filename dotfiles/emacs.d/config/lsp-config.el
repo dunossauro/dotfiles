@@ -1,60 +1,75 @@
-(use-package mason
-  :ensure t
-  :config
-  (mason-setup))
+(use-package mason :ensure t :config (mason-setup))
 
 (mason-setup
-  (dolist (pkg '("zuban" "ruff" "marksman" "ltex-ls-plus" "typos-lsp" "clangd" "bash-language-server" "tofu-ls"))
-    (unless (mason-installed-p pkg)
-      (ignore-errors (mason-install pkg)))))
+ (dolist (pkg
+          '("zuban"
+            "ruff"
+            "marksman"
+            "ltex-ls-plus"
+            "typos-lsp"
+            "clangd"
+            "bash-language-server"
+            "tofu-ls"))
+   (unless (mason-installed-p pkg)
+     (ignore-errors
+       (mason-install pkg)))))
 
 (defconst my/typos-modes
-  '(yaml-mode yaml-ts-mode
-    dockerfile-mode dockerfile-ts-mode
-    json-mode json-ts-mode
-    toml-mode toml-ts-mode
-    conf-mode ini-mode))
+  '(yaml-mode
+    yaml-ts-mode
+    dockerfile-mode
+    dockerfile-ts-mode
+    json-mode
+    json-ts-mode
+    toml-mode
+    toml-ts-mode
+    conf-mode
+    ini-mode))
 
-(use-package eglot
-  :ensure t
-  :defer t
-  :hook ((python-ts-mode . eglot-ensure)
-	 (markdown-mode . eglot-ensure)
-	 (c-ts-mode . eglot-ensure)
-	 (bash-ts-mode . eglot-ensure)
-	 (terraform-mode . eglot-ensure)
-         (python-ts-mode . (lambda () (set-fill-column 79))))
+(use-package
+ eglot
+ :ensure t
+ :defer t
+ :hook
+ ((python-ts-mode . eglot-ensure)
+  (markdown-mode . eglot-ensure)
+  (c-ts-mode . eglot-ensure)
+  (bash-ts-mode . eglot-ensure)
+  (terraform-mode . eglot-ensure)
+  (python-ts-mode . (lambda () (set-fill-column 79))))
 
-  :config
-  (add-to-list 'eglot-server-programs
-               '((python-mode python-ts-mode) . ("rass" "python")))
-  (add-to-list 'eglot-server-programs
-               '((markdown-mode) . ("rass" "markdown")))
-  (add-to-list 'eglot-server-programs
-               '((c-mode c-ts-mode) . ("rass" "clang")))
-  (add-to-list 'eglot-server-programs
-               '((sh-mode bash-ts-mode) . ("rass" "bash")))
-  (add-to-list 'eglot-server-programs
-               '((terraform-mode) . ("tofu-ls" "serve")))
+ :config
+ (add-to-list
+  'eglot-server-programs
+  '((python-mode python-ts-mode) . ("rass" "python")))
+ (add-to-list
+  'eglot-server-programs '((markdown-mode) . ("rass" "markdown")))
+ (add-to-list
+  'eglot-server-programs '((c-mode c-ts-mode) . ("rass" "clang")))
+ (add-to-list
+  'eglot-server-programs '((sh-mode bash-ts-mode) . ("rass" "bash")))
+ (add-to-list
+  'eglot-server-programs '((terraform-mode) . ("tofu-ls" "serve")))
 
-  ; only typos
-  (add-to-list 'eglot-server-programs
-               (cons my/typos-modes '("typos-lsp")))
+ ; only typos
+ (add-to-list
+  'eglot-server-programs (cons my/typos-modes '("typos-lsp")))
 
-  (setq-default
-   eglot-workspace-configuration
-   '(
-     :ltex
-     (:language "pt-BR" ;["pt-BR" "en-US"]
-      :additionalRules (:enablePickyRules t
-			:motherTongue "pt-BR")
-      :disabledRules (:pt-BR ["PT_SMART_QUOTES" "ELLIPSIS"])
-      :completionEnabled t)))
+ (setq-default
+  eglot-workspace-configuration
+  '(:ltex
+    (:language
+     "pt-BR" ;["pt-BR" "en-US"]
+     :additionalRules (:enablePickyRules t :motherTongue "pt-BR")
+     :disabledRules (:pt-BR ["PT_SMART_QUOTES" "ELLIPSIS"])
+     :completionEnabled t)))
 
-  :bind (:map eglot-mode-map
-	      ("C-c e a" . eglot-code-actions)
-	      ("C-c e r" . eglot-rename)
-	      ("C-c e f" . eglot-format)))
+ :bind
+ (:map
+  eglot-mode-map
+  ("C-c e a" . eglot-code-actions)
+  ("C-c e r" . eglot-rename)
+  ("C-c e f" . eglot-format)))
 
 
 ; add 'typos-modes' in eglot-ensure
@@ -62,10 +77,11 @@
   (add-hook (intern (format "%s-hook" mode)) #'eglot-ensure))
 
 
-(use-package flymake-diagnostic-at-point
-  :ensure t
-  :after flymake
-  :config
-  (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
+(use-package
+ flymake-diagnostic-at-point
+ :ensure t
+ :after flymake
+ :config
+ (add-hook 'flymake-mode-hook #'flymake-diagnostic-at-point-mode))
 
 (provide 'lsp-config)

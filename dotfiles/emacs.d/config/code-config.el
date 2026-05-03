@@ -19,29 +19,32 @@
   company-minimum-prefix-length 1)
  (global-company-mode t))
 
-(use-package eldoc-mouse
-  :ensure t
-  :hook (eglot-managed-mode . eldoc-mouse-mode))
+(use-package
+ eldoc-mouse
+ :ensure t
+ :hook (eglot-managed-mode . eldoc-mouse-mode))
 
-(use-package eldoc-box
-  :ensure t
-  :hook (eldoc-mode . eldoc-box-hover-mode)
-  :config
-  (setq
-   eldoc-idle-delay 0.5
-   eldoc-box-idle-delay 0.5
-   eldoc-message-function #'ignore
-   eldoc-box-position 'frame-center
-   eldoc-box-hover-when-idle nil)
-  :custom
-  (eldoc-box-position 'at-point)
-  (eldoc-box-max-pixel-width 600)
-  (eldoc-box-max-pixel-height 400))
+(use-package
+ eldoc-box
+ :ensure t
+ :hook (eldoc-mode . eldoc-box-hover-mode)
+ :config
+ (setq
+  eldoc-idle-delay 0.5
+  eldoc-box-idle-delay 0.5
+  eldoc-message-function #'ignore
+  eldoc-box-position 'frame-center
+  eldoc-box-hover-when-idle nil)
+ :custom
+ (eldoc-box-position 'at-point)
+ (eldoc-box-max-pixel-width 600)
+ (eldoc-box-max-pixel-height 400))
 
 ;; sardine
 (defun sardine/start-sardine ()
   (interactive)
-  (setq-local python-shell-interpreter "/home/dunossauro/.local/bin/sardine")
+  (setq-local python-shell-interpreter
+              "/home/dunossauro/.local/bin/sardine")
   (setq-local python-shell-interpreter-args "")
   (run-python))
 
@@ -80,9 +83,6 @@
  (global-treesit-auto-mode))
 
 
-(use-package hl-todo
-  :ensure t
-  :config
-  (global-hl-todo-mode 1))
+(use-package hl-todo :ensure t :config (global-hl-todo-mode 1))
 
 (provide 'code-config)
