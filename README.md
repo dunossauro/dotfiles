@@ -1,3 +1,7 @@
+Repositório arquivado, foi para o [https://codeberg.org/dunossauro/dotfiles](https://codeberg.org/dunossauro/dotfiles)
+---
+
+
 # dotfiles
 
 Minhas configurações do i3, bash, rofi, terminator e emacs
