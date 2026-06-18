@@ -94,6 +94,9 @@ dotfiles:
   d_dunst:
     src: config/dunst
     dst: ~/.config/dunst
+  f_flameshot.ini:
+    src: config/flameshot/flameshot.ini
+    dst: ~/.config/flameshot/flameshot.ini
 profiles:
   melville:
     dotfiles:
@@ -123,3 +126,4 @@ profiles:
     - f_colors_catppuccin-mocha-mauve.conf
     - f_early-init.el
     - d_dunst
+    - f_flameshot.ini
